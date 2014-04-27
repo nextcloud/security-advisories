@@ -1,0 +1,28 @@
+{
+   "Title":"Auth bypass in user_webdavauth and user_ldap", 
+   "Type":"Privilege Escalation",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"4.0.10",
+         "CVE":"CVE-2013-5665",
+         "Operator":"<"
+      },
+      {
+         "Version":"4.5.5",
+         "CVE":"CVE-2013-5665",
+         "Operator":"<"
+      }
+   ],
+   "Description": "<p>ownCloud 4.5.4, ownCloud 4.0.9 and all versions previous to this doesn’t sufficiently verify whether a request to settings.php was sent by an admin, which allows unauthenticated users to edit app configurations of user_webdavauth and user_ldap. An unauthenticated attacker may use this to gain access to any user account on the server if these plugins are enabled.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.5.5 or 4.0.10.</p>"
+}

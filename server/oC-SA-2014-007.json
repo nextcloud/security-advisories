@@ -1,0 +1,31 @@
+{
+   "Title":"Multiple XSS", 
+   "Timestamp":1404345600,
+   "Type":"XSS",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"6.0.2",
+         "CVE":"",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Multiple stored and reflected XSS have been adressed.</p>",
+   "ActionTaken":"",
+   "Acknowledgment":[
+      {
+         "Name":"Dirk van Veen",
+         "Mail":"dvanveen@itq.nl",
+         "Company":"Itq",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      },
+      {
+         "Name":"James Sibley",
+         "Mail":"jsibley1@gmail.com",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true        
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.2 or 5.0.15.</p>"
+}

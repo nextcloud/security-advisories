@@ -1,0 +1,23 @@
+{
+   "Title":"Password autocompletion", 
+   "Type":"Password autocompletion",
+   "Risk": 1,
+   "Affected":[
+      {
+         "Version":"5.0.6",
+         "CVE":"CVE-2013-2047",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Index.php (aka the login page) contains a form that does not disable the autocomplete setting for the password parameter, which makes it easier for local users or physically proximate attackers to obtain the password from web browsers that support autocomplete.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 5.0.6.</p>"
+}

@@ -1,0 +1,30 @@
+{
+   "Title":"Host Header Poisoning", 
+   "Timestamp":1404345600,
+   "Type":"Host Header Poisoning",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"6.0.2",
+         "CVE":"CVE-2014-2047",
+         "Operator":"<"
+      },
+      {
+         "Version":"5.0.15",
+         "CVE":"CVE-2014-2049",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to trusting user supplied input and interpret it as Host header an attacker is able to craft a password reset mail with a link pointing to his own site. If a user clicks on the link or a software (e.g. antivirus) is accessing the link the attacker is able to reset the user password.</p>",
+   "ActionTaken":"<p>The new 'trusted_domain' setting has been introduced in which all domains from which ownCloud should be accessible has to be specified. A default configuration can be found in config/config.sample.php.</p><p>ownCloud will add this configuration setting on its own during an update or a fresh installation using the currently used domain.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.2 or 5.0.15.</p>"
+}

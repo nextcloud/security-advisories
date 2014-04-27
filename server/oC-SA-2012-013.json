@@ -1,0 +1,21 @@
+{
+   "Title":"User enumeration", 
+   "Type":"User enumeration",
+   "Risk": 1,
+   "Affected":[
+      {
+         "Version":"4.0.7",
+         "Operator": "<",
+         "CVE": "CVE-2012-4390"
+      }
+   ],
+   "Description": "<p>apps/calendar/appinfo/remote.php and apps/contacts/appinfo/remote.php in ownCloud before 4.0.7 allows remote authenticated users to enumerate the registered users via unspecified vectors.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Florian Preinstorfer",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.0.7.</p>"
+}

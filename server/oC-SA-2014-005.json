@@ -1,0 +1,30 @@
+{
+   "Title":"LDAP injection", 
+   "Timestamp":1404345600,
+   "Type":"LDAP injection",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"6.0.2",
+         "CVE":"CVE-2014-2047",
+         "Operator":"<"
+      },
+      {
+         "Version":"5.0.15",
+         "CVE":"CVE-2014-2049",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to not properly sanitizing the LDAP queries an attacker is able to:<ul><li>Gain information about existing LDAP users</li><li>Modify the login query, e.g. with a wildcard</li></ul></p>",
+   "ActionTaken":"<p>All LDAP queries have been reviewed and proper sanitization added.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.2 or 5.0.15.</p>"
+}
