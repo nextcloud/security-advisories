@@ -1,0 +1,25 @@
+{
+   "Title":"Improper authorization checks in documents", 
+   "Timestamp":1400925269,
+   "Type":"Improper authorization checks",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"6.0.3",
+         "CVE":"CVE-2014-3834",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to not verifying whether an user has permission to rename files of other users an authenticated user could rename files of other users without permission.</p>",
+   "ActionTaken":"<p>We reviewed the access-control of the documents application and ensured that permissions are checked properly for every action.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.3.</p>"
+}

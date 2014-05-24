@@ -1,0 +1,43 @@
+{
+   "Title":"Improper authorization checks in core", 
+   "Timestamp":1400925269,
+   "Type":"Improper authorization checks",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"6.0.3",
+         "CVE":"CVE-2014-3838",
+         "Operator":"<"
+      },
+      {
+         "Version":"5.0.16",
+         "CVE":"CVE-2014-3838",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to an improper authorization check in core an attacker with access to at least two user account is able to access the file names of other users.</p><p>Our post-mortem audit showed that this vulnerability does not leak any content of the file or the directory structure except the filename.</p>",
+   "ActionTaken": "<p>We added a permission check whether the account is allowed to share the specified file.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Eddy Xu",
+         "Mail":"flyingtest09@gmail.com",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      },
+      {
+         "Name":"Robin Appelmann",
+         "Mail":"icewind@owncloud.com",
+         "Company":"ownCloud Inc.",
+         "Reason":"Investigating the affected components and providing a patch.",
+         "HoF": false
+      },
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Coordinating the patches.",
+         "HoF": false
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.3 or 5.0.16.</p>"
+}
