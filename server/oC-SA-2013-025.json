@@ -1,5 +1,6 @@
 {
-   "Title":"Privilege escalation and CSRF in the API", 
+   "Title":"Privilege escalation and CSRF in the API",
+   "Timestamp": 1368524542,
    "Type":"Privilege escalation",
    "Risk": 2,
    "Affected":[

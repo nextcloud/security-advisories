@@ -1,5 +1,6 @@
 {
-   "Title":"XSS vulnerability in user_webdavauth", 
+   "Title":"XSS vulnerability in user_webdavauth",
+   "Timestamp": 1352886142,
    "Type":"XSS",
    "Risk": 2,
    "Affected":[

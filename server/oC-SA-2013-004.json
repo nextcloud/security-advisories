@@ -1,5 +1,6 @@
 {
-   "Title":"Multiple CSRF vulnerabilities", 
+   "Title":"Multiple CSRF vulnerabilities",
+   "Timestamp": 1361353342,
    "Type":"CSRF",
    "Risk": 2,
    "Affected":[

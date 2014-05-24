@@ -1,5 +1,6 @@
 {
-   "Title":"CSRF token leakage", 
+   "Title":"CSRF token leakage",
+   "Timestamp": 1368524542,
    "Type":"Information leakage",
    "Risk": 2,
    "Affected":[

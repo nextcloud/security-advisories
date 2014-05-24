@@ -1,5 +1,6 @@
 {
-   "Title":"Insecure database password generator", 
+   "Title":"Insecure database password generator",
+   "Timestamp": 1365673342,
    "Type":"RNG",
    "Risk": 2,
    "Affected":[

@@ -1,5 +1,6 @@
 {
-   "Title":"Auth bypass in /lib/base.php", 
+   "Title":"Auth bypass in /lib/base.php",
+   "Timestamp": 1344591742,
    "Type":"Header Injection",
    "Risk": 3,
    "Affected":[

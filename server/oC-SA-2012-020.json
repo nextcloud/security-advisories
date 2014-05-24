@@ -1,5 +1,6 @@
 {
-   "Title":"Multiple reflected XSS", 
+   "Title":"Multiple reflected XSS",
+   "Timestamp": 1341999742,
    "Type":"XSS",
    "Risk": 2,
    "Affected":[

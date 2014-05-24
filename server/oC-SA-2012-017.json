@@ -1,5 +1,6 @@
 {
-   "Title":"Several CSRF security fixes", 
+   "Title":"Several CSRF security fixes",
+   "Timestamp": 1341135742,
    "Type":"CSRF",
    "Risk": 2,
    "Affected":[

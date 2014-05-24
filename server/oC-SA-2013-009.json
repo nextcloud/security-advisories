@@ -1,5 +1,6 @@
 {
-   "Title":"Incomplete blacklist vulnerability", 
+   "Title":"Incomplete blacklist vulnerability",
+   "Timestamp": 1363254142,
    "Type":"Blacklist bypass",
    "Risk": 3,
    "Affected":[

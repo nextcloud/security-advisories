@@ -1,5 +1,6 @@
 {
-   "Title":"Multiple directory traversals", 
+   "Title":"Multiple directory traversals",
+   "Timestamp": 1368524542,
    "Type":"Directory Traversal",
    "Risk": 3,
    "Affected":[

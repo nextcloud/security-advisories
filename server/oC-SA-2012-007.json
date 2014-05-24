@@ -1,5 +1,6 @@
 {
    "Title":"XSS vulnerability in bookmarks", 
+   "Timestamp": 1355996542,
    "Type":"XSS",
    "Risk": 2,
    "Affected":[

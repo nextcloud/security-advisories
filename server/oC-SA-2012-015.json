@@ -1,5 +1,6 @@
 {
-   "Title":"Auth bypass in index.php", 
+   "Title":"Auth bypass in index.php",
+   "Timestamp": 1341913342,
    "Type":"Authentication bypass",
    "Risk": 3,
    "Affected":[

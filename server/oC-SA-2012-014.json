@@ -1,5 +1,6 @@
 {
-   "Title":"CSRF in appconfig.php", 
+   "Title":"CSRF in appconfig.php",
+   "Timestamp": 1341913342,
    "Type":"CSRF",
    "Risk": 1,
    "Affected":[

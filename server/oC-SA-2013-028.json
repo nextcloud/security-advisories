@@ -1,5 +1,6 @@
 {
-   "Title":"Multiple XSS vulnerabilities", 
+   "Title":"Multiple XSS vulnerabilities",
+   "Timestamp": 1370511742,
    "Type":"XSS",
    "Risk": 2,
    "Affected":[

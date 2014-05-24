@@ -1,5 +1,6 @@
 {
    "Title":"Privilege escalation in the contacts application", 
+   "Timestamp": 1366364542,
    "Type":"Privilege escalation",
    "Risk": 2,
    "Affected":[

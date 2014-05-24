@@ -1,5 +1,6 @@
 {
    "Title":"Auth bypass in user_webdavauth and user_ldap", 
+   "Timestamp": 1355996542,
    "Type":"Privilege Escalation",
    "Risk": 3,
    "Affected":[

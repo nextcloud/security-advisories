@@ -1,5 +1,6 @@
 {
-   "Title":"XSS Vulnerability in MediaElement.js", 
+   "Title":"XSS Vulnerability in MediaElement.js",
+   "Timestamp": 1366364542,
    "Type":"XSS",
    "Risk": 3,
    "Affected":[

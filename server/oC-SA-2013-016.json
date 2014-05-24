@@ -1,5 +1,6 @@
 {
-   "Title":"Local file disclosure when running on Windows", 
+   "Title":"Local file disclosure when running on Windows",
+   "Timestamp": 1365673342, 
    "Type":"Directory Traversal",
    "Risk": 3,
    "Affected":[

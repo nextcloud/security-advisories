@@ -1,5 +1,6 @@
 {
-   "Title":"XSS Vulnerability in jPlayer", 
+   "Title":"XSS Vulnerability in jPlayer",
+   "Timestamp": 1365673342,
    "Type":"XSS",
    "Risk": 2,
    "Affected":[

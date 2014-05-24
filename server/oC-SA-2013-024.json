@@ -1,5 +1,6 @@
 {
-   "Title":"Privilege escalation in the calendar application", 
+   "Title":"Privilege escalation in the calendar application",
+   "Timestamp": 1368524542,
    "Type":"Privilege escalation",
    "Risk": 2,
    "Affected":[

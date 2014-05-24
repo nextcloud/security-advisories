@@ -1,5 +1,6 @@
 {
    "Title":"Reflected XSS in the file list", 
+   "Timestamp": 1342777342,
    "Type":"XSS",
    "Risk": 2,
    "Affected":[

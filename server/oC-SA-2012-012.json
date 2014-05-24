@@ -1,5 +1,6 @@
 {
    "Title":"Code execution in /lib/migrate.php", 
+   "Timestamp": 1341913342,
    "Type":"Blacklist bypass",
    "Risk": 3,
    "Affected":[

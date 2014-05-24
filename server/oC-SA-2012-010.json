@@ -1,5 +1,6 @@
 {
-   "Title":"HTTP header injection", 
+   "Title":"HTTP header injection",
+   "Timestamp": 1344591742,
    "Type":"Header Injection",
    "Risk": 1,
    "Affected":[
