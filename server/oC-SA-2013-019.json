@@ -1,6 +1,7 @@
 {
    "Title":"Multiple SQL injection", 
    "Type":"SQL Injection",
+   "Timestamp": 1368489600,
    "Risk": 3,
    "Affected":[
       {
