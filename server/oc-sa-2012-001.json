@@ -1,0 +1,32 @@
+{
+   "Title":"Multiple XSS vulnerabilities",
+   "Timestamp":1345801342,
+   "Type":"XSS",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"4.5.1",
+         "CVE":"CVE-2012-5605",
+         "Operator":"<"
+      },
+      {
+         "Version":"4.0.9",
+         "CVE": "CVE-2012-5605",
+         "Operator": "<"
+      }
+   ],
+   "Description": "<p>Multiple cross-site scripting (XSS) vulnerabilities in ownCloud 4.5.0 allow remote attackers to inject arbitrary web script or HTML via 
+</p><ul>
+<li>the filename to to versions.js in apps/files_versions/js/</li>
+<li>the filename to filelist.js in apps/files/js/</li>
+<li>the event title to fullcalendar.js in 3rdparty/fullcalendar/js/</li>
+</ul>",
+   "Acknowledgment":[
+      {
+         "Name":"Shai Rod",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.5.1 or 4.0.10.</p>"
+}

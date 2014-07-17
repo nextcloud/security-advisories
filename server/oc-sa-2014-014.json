@@ -1,0 +1,25 @@
+{
+   "Title":"CSRF in documents", 
+   "Timestamp":1400925269,
+   "Type":"CSRF",
+   "Risk": 1,
+   "Affected":[
+      {
+         "Version":"6.0.3",
+         "CVE":"CVE-2014-3836",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to not verifying whether a request was intentionally provided by the user who submitted an request the documents application is vulnerable against several CSRF attacks.</p><p>An attacker could have used this to arbitrary modify existing files or rename it.</p>",
+   "ActionTaken": "<p>We reviewed the CSRF protection of the documents application and added checks where necessarily.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.3.</p>"
+}

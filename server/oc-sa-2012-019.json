@@ -1,0 +1,24 @@
+{
+   "Title":"Reflected XSS",
+   "Timestamp": 1340444542,
+   "Type":"XSS",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"4.0.3",
+         "Operator": "<",
+         "CVE": "CVE-2012-4395"
+      }
+   ],
+   "Description": "<p>Cross-site scripting (XSS) vulnerability in index.php in ownCloud before 4.0.3 allows remote attackers to inject arbitrary web script or HTML via the redirect_url parameter.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.0.3.</p>"
+}

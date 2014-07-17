@@ -1,0 +1,22 @@
+{
+   "Title":"Auth bypass in index.php",
+   "Timestamp": 1341913342,
+   "Type":"Authentication bypass",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"4.0.7",
+         "Operator": "<",
+         "CVE": "CVE-2012-4392"
+      }
+   ],
+   "Description": "<p>index.php before ownCloud 4.0.7 does not properly validate the oc_token cookie, which allows remote attackers to bypass authentication via a crafted oc_token cookie value.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Julien Cayssol",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.0.7.</p>"
+}

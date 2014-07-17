@@ -1,0 +1,24 @@
+{
+   "Title":"Privilege escalation and CSRF in the API",
+   "Timestamp": 1368524542,
+   "Type":"Privilege escalation",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"5.0.6",
+         "CVE":"CVE-2013-2048",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to an insufficient permission check, an authenticated attacker is able to execute API commands as administrator. Additionally, an unauthenticated attacker could abuse this flaw as a cross-site request forgery vulnerability.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 5.0.6.</p>"
+}

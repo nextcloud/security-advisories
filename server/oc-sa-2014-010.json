@@ -1,0 +1,30 @@
+{
+   "Title":"Multiple XSS", 
+   "Timestamp":1400925269,
+   "Type":"XSS",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"6.0.3",
+         "CVE":"CVE-2014-3832, CVE-2014-3833",
+         "Operator":"<"
+      },
+      {
+         "Version":"5.0.16",
+         "CVE":"CVE-2014-3833",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to not sanitising all user provided input the below mentioned ownCloud versions are vulnerable against several <a href=\"https://cwe.mitre.org/data/definitions/79.html\">XSS attack vectors</a>.</p><p>ownCloud advises browsers to disable inline JavaScript execution due to the used Content-Security-Policy, this vulnerability is therefore likely not exploitable if you use a browser that <a href=\"http://caniuse.com/contentsecuritypolicy\">fully supports</a> the current CSP standard.</p>",
+   "ActionTaken":"<p>ownCloud offers the functions <code>p()</code> which encodes potential dangerous input using `htmlspecialchars()`. We have reviewed whether the potential insecure pendant <code>print_unescaped()</code> was used in other places and replaced unneeded occurrences with the safe variant.</p><p>This review helped us to discover vulnerabilities in the following components.</p><strong>stable6</strong><ul><li>Gallery (stored) (CVE-2014-3833)</li><li>ownCloud core (stored + reflected) (CVE-2014-3833)</li><li>Documents (stored) (CVE-2014-3832)</li></ul><strong>stable5</strong><ul><li>Gallery (stored) (CVE-2014-3833)</li><li>ownCloud core (stored + reflected) (CVE-2014-3833)</li></ul>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.3 or 5.0.16.</p>"
+}

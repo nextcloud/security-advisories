@@ -1,0 +1,25 @@
+{
+   "Title":"Session Fixation", 
+   "Timestamp":1404345600,
+   "Type":"Session Fixation",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"6.0.2",
+         "CVE":"CVE-2014-2047",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to authenticating a user without invalidating any existing session identifier an attacker has the opportunity to steal authenticated sessions. A successful exploit requires that PHP is configured to accept session parameters via <code>GET</code>.</p>",
+   "ActionTaken":"<p>The session is now regenerated after a successful login.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.2.</p>"
+}

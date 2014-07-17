@@ -1,0 +1,25 @@
+{
+   "Title":"Deserialization of Untrusted Data in core", 
+   "Timestamp":1400925269,
+   "Type":"Deserialization",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"6.0.3",
+         "CVE":"CVE-2014-3839",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to the deserialization of unstrusted data in core an attacker might be able to delete arbitrary files from the filesystem or executing arbitrary SQL queries.</p><p>This issue has been found in a widely used third-party library, we have removed the component due to general quality concerns from the release and are coordinating this issue to upstream.</p>",
+   "ActionTaken": "<p>We have removed the vulnerable component and are coordinating this issue with the upstream vendor.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.3.</p>"
+}

@@ -1,0 +1,37 @@
+{
+   "Title":"Multiple XSS vulnerabilities",
+   "Timestamp": 1364895742,
+   "Type":"XSS",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"5.0.1",
+         "CVE":"CVE-2013-1890",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Multiple cross-site scripting (XSS) vulnerabilities in ownCloud 5.0.0 allow remote attackers to inject arbitrary web script or HTML via
+</p><ul>
+<li>the “new_name” POST parameter to renameTag.php in /apps/bookmarks/ajax/</li>
+<ul>
+<li><strong>Commits:</strong> 1c63eb1 (stable5)</li>
+<li><strong>Risk:</strong> Medium</li>
+<li><strong>Note:</strong> Successful exploitation of this stored XSS requires the “bookmark” app to be enabled. (enabled by default)</li>
+</ul>
+<li>multiple unspecified parameters to several files in apps/contacts/ajax/</li>
+<ul>
+<li><strong>Commits:</strong> ae9e5a4 (stable5)</li>
+<li><strong>Risk:</strong> Medium</li>
+<li><strong>Note:</strong> Successful exploitation of this stored XSS requires the “calendar” app to be enabled. (enabled by default)</li>
+</ul>
+</ul>",
+   "Acknowledgment":[
+      {
+         "Name":"Dylan Irzi",
+         "Company": "WebSecurityDev",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 5.0.1.</p>"
+}

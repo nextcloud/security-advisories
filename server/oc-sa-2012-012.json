@@ -1,0 +1,22 @@
+{
+   "Title":"Code execution in /lib/migrate.php", 
+   "Timestamp": 1341913342,
+   "Type":"Blacklist bypass",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"4.0.7",
+         "Operator": "<",
+         "CVE": "CVE-2012-4389"
+      }
+   ],
+   "Description": "<p>Incomplete blacklist vulnerability in lib/migrate.php in ownCloud before 4.0.7 allows remote attackers to execute arbitrary code by uploading a crafted .htaccess file in an import.zip file and accessing an uploaded PHP file.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Julien Cayssol",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.0.7.</p>"
+}

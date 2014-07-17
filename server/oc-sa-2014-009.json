@@ -1,0 +1,24 @@
+{
+   "Title":"Users can mount the local filesystem", 
+   "Timestamp":1404345600,
+   "Type":"Privilege escalation",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"6.0.1",
+         "CVE":"",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to an insufficient permission check authenticated users are able to access preview pictures of others users.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 6.0.2.</p>"
+}

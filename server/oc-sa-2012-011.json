@@ -1,0 +1,24 @@
+{
+   "Title":"Auth bypass in /lib/base.php",
+   "Timestamp": 1344591742,
+   "Type":"Header Injection",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"4.0.8",
+         "Operator": "<",
+         "CVE": "CVE-2012-5336"
+      }
+   ],
+   "Description": "<p>/lib/base.php before ownCloud 4.0.8 does not properly validate the user_id session variable via WebDAV, which allows authenticated attackers to gain access to other users files.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.org",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.0.8.</p>"
+}

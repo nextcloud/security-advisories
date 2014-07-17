@@ -1,0 +1,22 @@
+{
+   "Title":"HTTP header injection",
+   "Timestamp": 1344591742,
+   "Type":"Header Injection",
+   "Risk": 1,
+   "Affected":[
+      {
+         "Version":"4.0.8",
+         "Operator": "<",
+         "CVE": "CVE-2012-5057"
+      }
+   ],
+   "Description": "<p>A Header injection vulnerability in ownCloud before 4.0.8 allows remote attackers to perform HTTP Response Splitting attacks to modify expected HTML content from the server via the HTTP url path parameter to index.php.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Nico Golde",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.0.8.</p>"
+}

@@ -1,0 +1,23 @@
+{
+   "Title":"Privilege escalation in the calendar application", 
+   "Timestamp": 1361353342,
+   "Type":"Privilege Escalation",
+   "Risk": 2,
+   "Affected":[
+      {
+         "Version":"4.5.7",
+         "CVE":"CVE-2013-0304",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Due to not properly checking the ownership of an calendar, an authenticated attacker is able to download calendars of other users via the “calid” GET parameter to export.php in /apps/calendar/</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Romain Severin",
+         "Company":"Intrinsec",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 4.5.8.</p>"
+}
