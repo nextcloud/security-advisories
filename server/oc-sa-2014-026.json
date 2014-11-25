@@ -6,12 +6,12 @@
    "Affected":[
       {
          "Version":"7.0.3",
-         "CVE":"CVE-2014-9049",
+         "CVE":"CVE-2014-9047",
          "Operator":"<"
       },
       {
          "Version":"6.0.6",
-         "CVE":"CVE-2014-9049",
+         "CVE":"CVE-2014-9047",
          "Operator":"<"
       }      
    ],
