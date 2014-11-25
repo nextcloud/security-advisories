@@ -1,0 +1,30 @@
+{
+   "Title": "Local file disclosure due to the preview system", 
+   "Timestamp": 1416924000,
+   "Type": "Local File Disclosure",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"7.0.3",
+         "CVE":"CVE-2014-9049",
+         "Operator":"<"
+      },
+      {
+         "Version":"6.0.6",
+         "CVE":"CVE-2014-9049",
+         "Operator":"<"
+      }      
+   ],
+   "Description":"<p>ownCloud includes a preview system which generates the small thumbnails shown in the file list of the web interface. This functionality can be controlled with the enable_previews switch in config.php and is enabled by default.</p><p>Multiple unspecified vulnerabilities have been found within the preview system. Using these vulnerabilities an authenticated adversary (or an unauthenticated one if public uploads are enabled) may be able to extract local files from the ownCloud system.</p>",
+   "ActionTaken": "<p>An additional configuration switch has been added to <code>config.php</code>. The <code>enabledPreviewProviders</code> option allows defining which preview providers are enabled.</p><p>By default the preview system is now only generating thumbnails for images and plain-text based formats. File formats that may leak local file content have been disabled by default.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.com",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 7.0.3 or 6.0.6.</p>"
+}
