@@ -15,7 +15,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>ownCloud provides multiple user backends that can be used to authenticate users.</p>0x0x<p>One of those backend providers is \"user_external\", which authenticates users against FTP, IMAP or SMB servers. This is mainly useful when it is not possible to authenticate against an LDAP server.</p>0x0x<p>The FTP backend provided by \"user_external\" was not properly URL-encoding the password. Thus, an attacker may use a specially crafted password to login to the remote server.</p>0x0x<p>If the ownCloud instance is able to access external FTP servers this effectively allows an adversary to login without providing valid credentials, if the \"user_external\" FTP backend has been enabled and configured.</p>",
+   "Description":"<p>ownCloud provides multiple user backends that can be used to authenticate users.</p><p>One of those backend providers is \"user_external\", which authenticates users against FTP, IMAP or SMB servers. This is mainly useful when it is not possible to authenticate against an LDAP server.</p><p>The FTP backend provided by \"user_external\" was not properly URL-encoding the password. Thus, an attacker may use a specially crafted password to login to the remote server.</p><p>If the ownCloud instance is able to access external FTP servers this effectively allows an adversary to login without providing valid credentials, if the \"user_external\" FTP backend has been enabled and configured.</p>",
    "ActionTaken": "<p>The FTP user backend within \"user_external\" is now properly encoding the credentials.</p>",
    "Acknowledgment":[
       {
