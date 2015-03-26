@@ -1,0 +1,34 @@
+{
+   "Title":"Bypass of file blacklist",
+   "Timestamp": 1427291349,
+   "Type":"Blacklist bypass",
+   "Risk": 3,
+   "Affected":[
+      {
+         "Version":"7.0.5",
+         "CVE":"TBD",
+         "Operator":"<"
+      },
+      {
+         "Version":"6.0.7",
+         "CVE":"TBD",
+         "Operator":"<"
+      },
+      {
+         "Version":"5.0.19",
+         "CVE":"TBD",
+         "Operator":"<"
+      }       
+   ],
+   "Description":"<p>A blacklist bypass vulnerability including UTF-8 encoding in file paths in the mentioned ownCloud versions, allows authenticated remote attackers to bypass the file blacklist and upload files such as the <code>.htaccess</code> files.</p><p>An attacker could leverage this bypass by uploading a <code>.htaccess</code> and execute arbitrary PHP code if the <code>/data/</code> directory is stored inside the webroot and a webserver that interprets <code>.htaccess</code> files is used (e.g. Apache)</p><p>ownCloud always recommends to move the <code>data</code> directory outside of the web root.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.com",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to ownCloud Server 7.0.4, 6.0.7 or 5.0.19.</p>"
+}
