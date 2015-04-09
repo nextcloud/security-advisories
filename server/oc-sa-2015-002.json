@@ -7,16 +7,16 @@
       {
          "Version":"7.0.5",
          "CVE":"TBD",
-         "Operator":"<"
+         "Operator":"CVE-2015-3012"
       },
       {
          "Version":"6.0.7",
-         "CVE":"TBD",
+         "CVE":"CVE-2015-3012",
          "Operator":"<"
       },
       {
          "Version":"5.0.19",
-         "CVE":"TBD",
+         "CVE":"CVE-2015-3012",
          "Operator":"<"
       }       
    ],
