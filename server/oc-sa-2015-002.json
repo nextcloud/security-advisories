@@ -6,8 +6,8 @@
    "Affected":[
       {
          "Version":"7.0.5",
-         "CVE":"TBD",
-         "Operator":"CVE-2015-3012"
+         "CVE":"CVE-2015-3012",
+         "Operator":"<"
       },
       {
          "Version":"6.0.7",
