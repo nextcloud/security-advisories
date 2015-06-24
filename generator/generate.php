@@ -61,10 +61,16 @@ foreach($components as $component) {
 
             $cwe = '';
             if(isset($advisory['CWE'])) {
-                $cwe = '<a href="">CWE</a>';
+                $cwe = '<p>CWE: <a href="https://cwe.mitre.org/data/definitions/'.$advisory['CWE']['id'].'.html">'.$advisory['CWE']['name'] . ' (CWE-'.$advisory['CWE']['id'].')</a></p>';
+
             }
             $content = str_replace('~~CWE~~', $cwe, $content);
 
+            $cvss = '';
+            if(isset($advisory['CVSS2'])) {
+                $cvss = '<p>CVSS v2 Base Score: '.$advisory['CVSS2']['score'].' (<a href="https://nvd.nist.gov/cvss.cfm?calculator&version=2&vector=('.$advisory['CVSS2']['vector'].')">'.$advisory['CVSS2']['vector'].'</a>)</p>';
+            }
+            $content = str_replace('~~CVSS2~~', $cvss, $content);
 
             $content = str_replace('~~DESCRIPTION~~', $advisory['Description'], $content);
 
