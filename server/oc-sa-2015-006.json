@@ -1,0 +1,37 @@
+{
+   "Title":"Local file inclusion on MS Windows Platform",
+   "Timestamp": 1435155059,
+   "Type":"Blacklist bypass",
+   "Risk": 3,
+   "CVSS2": {
+      "score": 9,
+      "vector": "AV:N/AC:L/Au:S/C:C/I:C/A:C"
+   },
+   "CWE": {
+      "id": 98,
+      "name": "Improper Control of Filename for Include/Require Statement in PHP Program (\"PHP Remote File Inclusion\")"
+   },
+   "Affected":[
+      {
+         "Version":"7.0.6",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"8.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }       
+   ],
+   "Description": "<p>Due to an improper control of the filename for a <code>require_once()</code> statement in the routing component a limited local file inclusion vulnerability is existent in all below mentioned ownCloud versions when running on the MS Windows Platform.</p><p>Depending on the ownCloud configuration and the authentication state of a remote attacker this vulnerability may have different impact. Specifically:</p><ul><li>An unauthenticated remote attacker is able to reinstall the instance in case he is able to connect to a database or the SQLite driver is installed. This will overwrite the existing configuration and existing users will not be able to login anymore. This attack is very likely to be noticed, however an attacker is granted administrative access to the ownCloud instance. If a backup of the configuration file is accessible for the web server user the attacker might restore it after a successful exploitation to cover the attack</li><li>An unauthenticated remote attacker is able to execute arbitrary PHP code if he is able to upload files using the public upload functionality and he can guess the full path of the folder.</li><li>An authenticated remote attacker is able to execute arbitrary PHP code if the /data/ directory is below the ownCloud root. The directory can be moved using the datadirectory configuration in config/config.php.</li></ul>",
+   "ActionTaken": "<p>The ownCloud Server component is now properly sanitizing characters to the affected routing component. Starting with ownCloud 8.1 it will not be possible anymore to run ownCloud Server on the MS Windows Platform.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.com",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ]
+}

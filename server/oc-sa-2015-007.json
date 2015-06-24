@@ -1,0 +1,41 @@
+{
+   "Title":"Resource Exthaustion when sanitizing filenames",
+   "Timestamp": 1435155059,
+   "Type":"DoS",
+   "Risk": 2,
+   "CVSS2": {
+      "score": 7.8,
+      "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:C"
+   },
+   "CWE": {
+      "id": 400,
+      "name": "Uncontrolled Resource Consumption ('Resource Exhaustion')"
+   },
+   "Affected":[
+      {
+         "Version":"6.0.8",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"7.0.6",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"8.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }       
+   ],
+   "Description": "<p>The sanitization component for filenames was vulnerable to DoS when parsing specially crafted file names passed via specific endpoints.</p><p>Effectively this lead to a endless loop filling the log file until the system is not anymore responsive.</p>",
+   "ActionTaken": "<p>This was caused by the PHP behaviour of allowing to cast <code>$_GET</code> values to an array. The critical usages have been fixed in all affected versions and with ownCloud 8.1 the usages of <code>$_GET</code> in the whole code base has been reviewed.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Emiel Florijn",
+         "Mail":"emielflorijn@gmail.com",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ]
+}
