@@ -14,17 +14,17 @@
    "Affected":[
       {
          "Version":"6.0.8",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2015-4715",
          "Operator":"<"
       },
       {
          "Version":"7.0.6",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2015-4715",
          "Operator":"<"
       },
       {
          "Version":"8.0.4",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2015-4715",
          "Operator":"<"
       }       
    ],
