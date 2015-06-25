@@ -1,5 +1,5 @@
 {
-   "Title":"Resource Exthaustion when sanitizing filenames",
+   "Title":"Command injection when using external SMB storage",
    "Timestamp": 1435155059,
    "Type":"Command Injection",
    "Risk": 3,
