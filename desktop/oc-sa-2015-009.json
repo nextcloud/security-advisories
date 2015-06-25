@@ -3,6 +3,14 @@
     "Timestamp": 1433785226,
     "Type": "SSL",
     "Risk": 2,
+    "CVSS2": {
+        "score": 6.1,
+        "vector": "AV:N/AC:H/Au:N/C:C/I:P/A:N"
+    },
+    "CWE": {
+        "id": 297,
+        "name": "Improper Validation of Certificate with Host Mismatch"
+    },
     "Affected": [
         {
             "Version": "1.8.2",
