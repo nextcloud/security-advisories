@@ -1,0 +1,42 @@
+{
+   "Title":"Disclosure of users files when deleting parent folders of shared files",
+   "Timestamp": 1438606571,
+   "Type":"File Disclosure",
+   "Risk": 2,
+   "CVSS2": {
+      "score": 3.5,
+      "vector": "AV:N/AC:M/Au:S/C:P/I:N/A:N"
+   },
+   "CWE": {
+      "id": 252,
+      "name": "Unchecked Return Value"
+   },
+   "Affected":[
+      {
+         "Version":"7.0.5",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"8.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"6.0.9",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description": "<p>Due to a common incorrect usage of the <code>getPath</code> function of the ownCloud virtual filesystem multiple security issues occurred. Especially the function may return <code>null</code> in case the specified file does not exist anymore. When passing the result of <code>getPath</code> in combination with <code>null</code> to functions that setup a virtual chroot or other security relevant limitations PHP would typecast the return value to an empty string and thus effectively bypassing the internal security functions of ownCloud.</p><p><code>getPath</code> with a return type of <code>null</code> is a common occurrence in case a folder has been shared publicly and the parent item has been deleted later from the database. Due to missing foreign keys the share is still considered valid and will finally resolve to the users' root directory.</p><p>In such cases an adversary with knowledge of the sharing link to a deleted item may be able to access all files of the user and not only the original shared directory.</p>",
+   "ActionTaken": "<p>All usages of the <code>getPath</code> function has been revised and corrected.</p><p>Furthermore, ownCloud 8.2 will feature another security hardening where instead of returning <code>null</code> for invalid files now an exception is thrown. In case of an exception ownCloud will stop the script execution and also static source code analysis will make developers aware of such situations.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.com",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ]
+}

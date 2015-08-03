@@ -1,0 +1,37 @@
+{
+   "Title":"Stored XSS in \"activity\" application",
+   "Timestamp": 1438606571,
+   "Type":"Stored XSS",
+   "Risk": 1,
+   "CVSS2": {
+      "score": 3.5,
+      "vector": "AV:N/AC:M/Au:S/C:P/I:N/A:N"
+   },
+   "CWE": {
+      "id": 97,
+      "name": "Improper Neutralization of Input During Web Page Generation"
+   },
+   "Affected":[
+      {
+         "Version":"7.0.5",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"8.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }       
+   ],
+   "Description": "<p>Due to not sanitising all user provided input, the &quot;activity&quot; application shipped with the mentioned ownCloud versions is vulnerable to stored cross-site scripting attacks. The &quot;activity&quot; application is enabled by default in the ownCloud Community Edition and Enterprise Edition.</p><p>Successful exploitation requires that the adversary is able to create files containing the <code>&quot;</code> character. This character is forbidden by default in any current ownCloud version except 8.1.0 RC1, thus an actual exploitation requires that the user has mounted an external storage within ownCloud where a user can create files with such characters. Alternatively an adversary may discover a way to circumvent the input validation. (ownCloud is not aware of a bypass of to the input validation) – Furthermore the attacker must be able to share a folder containing the files with malicious filename with the victim.</p><p>Since ownCloud employs a strict Content-Security-Policy that forbids inline script execution. Thus this bug is unlikely to be exploitable on recent browsers that support Content-Security-Policy. (Firefox &gt;= 23, Chrome &gt;= 25, Safari &gt;= 7)</p>",
+   "ActionTaken": "<p>The output is now properly sanitized.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.com",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ]
+}

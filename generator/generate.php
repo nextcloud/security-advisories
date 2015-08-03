@@ -24,6 +24,7 @@ date_default_timezone_set('Europe/Zurich');
 $components = [
     'server',
     'desktop',
+    'mobile',
 ];
 $advisorySideBar = '';
 
@@ -95,7 +96,14 @@ foreach($components as $component) {
                     $company = isset($acknowledgment['Company']) ? $acknowledgment['Company'] : '';
                     $mail = isset($acknowledgment['Mail']) ? $acknowledgment['Mail'] : '';
                     $reason = isset($acknowledgment['Reason']) ? $acknowledgment['Reason']: '';
-                    $acknowledgments .= '<li>'.$acknowledgment['Name'].' - '.$company.' ('.$mail.') - '.$reason.'</li>';
+                    $acknowledgments .= '<li>'.$acknowledgment['Name'];
+                    if($company !== '') {
+                        $acknowledgments .= ' - '.$company;
+                    }
+                    if($mail !== '') {
+                        $acknowledgments .= ' ('.$mail.')';
+                    }
+                    $acknowledgments .= ' - '.$reason.'</li>';
                 }
             }
             $content = str_replace('~~ACKNOWLEDGMENTS~~', $acknowledgments, $content);
@@ -121,7 +129,7 @@ foreach($components as $component) {
 
     // Create sidebar with bugs from the latest version
     foreach($componentBugs as $version => $bug) {
-        $advisorySideBar .= '<p>ownCloud ' . ucfirst($component) . ' ' . $version .'</p>';
+        $advisorySideBar .= '<p>ownCloud ' . $component . ' ' . $version .'</p>';
         foreach($bug as $key => $title) {
             $advisorySideBar .= '<a href="/security/advisory?id='.$key.'">'.$title.'</a><br/>';
         }

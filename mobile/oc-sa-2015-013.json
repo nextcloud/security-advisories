@@ -1,0 +1,32 @@
+{
+   "Title":"Credentials potentially leaked to other configured ownCloud instance",
+   "Timestamp": 1438606571,
+   "Type":"Data mixup",
+   "Risk": 1,
+   "CVSS2": {
+      "score": 2.6,
+      "vector": "AV:N/AC:H/Au:N/C:P/I:N/A:N"
+   },
+   "CWE": {
+      "id": 201,
+      "name": "Information Exposure Through Sent Data"
+   },
+   "Affected":[
+      {
+         "Version":"iOS 3.4.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description": "<p>A bug in the ownCloud iOS application below version 3.4.4 may leak credentials as well as cookies used for authentication purposes to other configured ownCloud instances.</p><p>Specifically, the ownCloud iOS application allows users to connect to multiple ownCloud instances offering an easy way to switch between different accounts on different instances. An user may for example configure their hosted ownCloud by a third-party provider as well as their company ownCloud instance.</p><p>In some cases when switching the accounts in the iOS applications the application is not properly handling the state switch and will continue to send the previous authentication headers to the other instance. Thus a malicious administrator on another configured ownCloud instance may gain access to the user' credentials on the other instance.</p>",
+   "ActionTaken": "<p>The iOS application is now properly handling credentials as well as cookies and will send these only to the correct domains.</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Lukas Reschke",
+         "Mail":"lukas@owncloud.com",
+         "Company":"ownCloud Inc.",
+         "Reason":"Vulnerability discovery and disclosure.",
+         "HoF": true
+      }
+   ]
+}
