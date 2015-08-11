@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"iOS 3.4.4",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2015-5955",
          "Operator":"<"
       }
    ],
