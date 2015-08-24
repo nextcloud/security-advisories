@@ -118,21 +118,31 @@ foreach($components as $component) {
     uksort($componentBugs, 'version_compare');
     $componentBugs = array_reverse($componentBugs);
     $componentList = '';
+    $i = 0;
     foreach($componentBugs as $version => $bug) {
+        if($i !== 0) {
+            $componentList .= "<br/>";
+        }
         $componentList .= "<p>Version $version</p>";
         foreach($bug as $identifier => $title) {
             $componentList .= "<a href=\"/security/advisory?id=$identifier\">$title</a><br>";
         }
+        $i++;
     }
     file_put_contents("./out/$component-list-part.php", $componentList);
     echo "Created component list\n";
 
     // Create sidebar with bugs from the latest version
+    $i = 0;
     foreach($componentBugs as $version => $bug) {
+        if($i !== 0) {
+            $advisorySideBar .= "<br/>";
+        }
         $advisorySideBar .= '<p>ownCloud ' . $component . ' ' . $version .'</p>';
         foreach($bug as $key => $title) {
             $advisorySideBar .= '<a href="/security/advisory?id='.$key.'">'.$title.'</a><br/>';
         }
+        $i++;
         break;
     }
 
