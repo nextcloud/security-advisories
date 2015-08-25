@@ -24,7 +24,7 @@
       }
    ],
    "Description": "<p>Due to an incorrect usage of an ownCloud internal file system function the passed path to the file scanner was resolved relatively. An authenticated adversary may thus be able to get a listing of directories (but not the containing files) existing on the filesystem. However, it is not possible to access any of these files.</p><p>For a more technical description please take a look at the <a href=\"https://www.syss.de/pentest-blog/news-detail/?tx_news_pi1%5Bnews%5D=140&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=3d9e93c60f57ab1885ac335974427a7f\">advisory of the reporter</a>.</p>",
-   "ActionTaken": "<p>The vulnerable vulnerable component has been patched and <a href=\"https://github.com/owncloud/core/issues/17906\">will be replaced by a cron job in a future ownCloud release</a></p>",
+   "ActionTaken": "<p>The vulnerable component has been patched and <a href=\"https://github.com/owncloud/core/issues/17906\">will be replaced by a cron job in a future ownCloud release</a></p>",
    "Acknowledgment":[
       {
          "Name":"Martin Macht",
