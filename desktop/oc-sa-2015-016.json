@@ -14,7 +14,7 @@
     "Affected": [
         {
             "Version": "2.0.1",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2015-7298",
             "Operator": "<"
         }
     ],
