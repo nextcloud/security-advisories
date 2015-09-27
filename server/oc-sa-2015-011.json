@@ -13,12 +13,12 @@
    },
    "Affected":[
       {
-         "Version":"7.0.5",
+         "Version":"7.0.7",
          "CVE":"CVE-2015-5954",
          "Operator":"<"
       },
       {
-         "Version":"8.0.4",
+         "Version":"8.0.5",
          "CVE":"CVE-2015-5954",
          "Operator":"<"
       },
