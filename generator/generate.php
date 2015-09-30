@@ -73,12 +73,12 @@ foreach($components as $component) {
             }
             $content = str_replace('~~CVSS2~~', $cvss, $content);
 
-            $content = str_replace('~~DESCRIPTION~~', $advisory['Description'], $content);
+            $content = str_replace('~~DESCRIPTION~~', str_replace("</p>", "</p>\n", $advisory['Description']), $content);
 
             $affectedVersions = '';
             foreach($advisory['Affected'] as $affected) {
                 $operator = isset($affected['Operator']) ? $affected['Operator'].' ' : '';
-                $affectedVersions .= '<li>ownCloud '. ucfirst($component). ' ' . htmlentities($operator).'<strong>'.$affected['Version'].'</strong> ('.$affected['CVE'].')</li>';
+                $affectedVersions .= "<li>ownCloud ". ucfirst($component). " " . htmlentities($operator)."<strong>".$affected["Version"]."</strong> (".$affected["CVE"].")</li>\n";
                 $componentBugs[$affected['Version']][substr($fileinfo, 0, -5)] = $advisory['Title'];
             }
             $content = str_replace('~~AFFECTEDVERSIONS~~', $affectedVersions, $content);
@@ -88,7 +88,7 @@ foreach($components as $component) {
             } else {
                 $actionTaken = $advisory['Resolution'];
             }
-            $content = str_replace('~~ACTION~~', $actionTaken, $content);
+            $content = str_replace('~~ACTION~~',  str_replace("</p>", "</p>\n", $actionTaken), $content);
 
             $acknowledgments = '';
             if(isset($advisory['Acknowledgment'])) {
