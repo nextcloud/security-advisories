@@ -79,6 +79,18 @@ foreach($components as $component) {
             foreach($advisory['Affected'] as $affected) {
                 $operator = isset($affected['Operator']) ? $affected['Operator'].' ' : '';
                 $affectedVersions .= "<li>ownCloud ". ucfirst($component). " " . htmlentities($operator)."<strong>".$affected["Version"]."</strong> (".$affected["CVE"].")</li>\n";
+                if(isset($affected['Commits'])) {
+                    $affectedVersions .= "<ul>\n";
+                    $commitsToList = count($affected['Commits']);
+                    foreach($affected['Commits'] as $commit) {
+
+                        $repository = explode('/', $commit)[0];
+                        $commit = explode('/', $commit)[1];
+
+                        $affectedVersions .= "<li><a href=\"https://github.com/owncloud/".$repository."/commit/".$commit."\">".$repository."/".$commit."</a></li>\n";
+                    }
+                    $affectedVersions .= "</ul>\n";
+                }
                 $componentBugs[$affected['Version']][substr($fileinfo, 0, -5)] = $advisory['Title'];
             }
             $content = str_replace('~~AFFECTEDVERSIONS~~', $affectedVersions, $content);
