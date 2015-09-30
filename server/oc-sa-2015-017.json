@@ -1,0 +1,35 @@
+{
+    "Title": "Command injection when using external SMB storage",
+    "Timestamp": 1443624831,
+    "Type": "RCE",
+    "Risk": 3,
+    "CVSS2": {
+        "score": 9,
+        "vector": "AV:N/AC:L/Au:S/C:C/I:C/A:C"
+    },
+    "CWE": {
+        "id": 78,
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    },
+    "Affected": [
+        {
+            "Version": "8.1.2",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/8c145541f65592a4d2d7de50ecfa1b0698496cb8"
+            ]
+        }
+    ],
+    "Description": "<p>The external legacy SMB storage (not using php-libsmbclient) of ownCloud was not properly neutralizing all special elements which allows an adversary to execute arbitrary SMB commands.</p><p>Effectively this allows an attacker to gain access to any file on the system or overwrite it, potentially leading to a PHP code execution.</p>",
+    "ActionTaken": "<p>The vulnerable library is now properly handling potentially dangerous characters.</p>",
+    "Acknowledgment":[
+        {
+            "Name":"Lukas Reschke",
+            "Mail":"lukas@owncloud.com",
+            "Company":"ownCloud Inc.",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}
