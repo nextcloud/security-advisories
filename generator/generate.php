@@ -123,9 +123,9 @@ foreach($components as $component) {
         if($i !== 0) {
             $componentList .= "<br/>";
         }
-        $componentList .= "<p>Version $version</p>";
+        $componentList .= "<p>Version $version</p>\n";
         foreach($bug as $identifier => $title) {
-            $componentList .= "<a href=\"/security/advisory?id=$identifier\">$title</a><br>";
+            $componentList .= "<a href=\"/security/advisory?id=$identifier\">$title</a><br>\n";
         }
         $i++;
     }
@@ -138,9 +138,9 @@ foreach($components as $component) {
         if($i !== 0) {
             $advisorySideBar .= "<br/>";
         }
-        $advisorySideBar .= '<p>ownCloud ' . $component . ' ' . $version .'</p>';
+        $advisorySideBar .= "<p>ownCloud " . $component . " " . $version ."</p>\n";
         foreach($bug as $key => $title) {
-            $advisorySideBar .= '<a href="/security/advisory?id='.$key.'">'.$title.'</a><br/>';
+            $advisorySideBar .= "<a href=\"/security/advisory?id=".$key."\">".$title."</a><br/>\n";
         }
         $i++;
         break;
