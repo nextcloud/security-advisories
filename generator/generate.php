@@ -147,14 +147,10 @@ foreach($components as $component) {
     // Create sidebar with bugs from the latest version
     $i = 0;
     foreach($componentBugs as $version => $bug) {
-        if($i !== 0) {
-            $advisorySideBar .= "<br/>";
-        }
-        $advisorySideBar .= "<p>ownCloud " . $component . " " . $version ."</p>\n";
+        $advisorySideBar .= "<br/><p>ownCloud " . $component . " " . $version ."</p>\n";
         foreach($bug as $key => $title) {
             $advisorySideBar .= "<a href=\"/security/advisory?id=".$key."\">".$title."</a><br/>\n";
         }
-        $i++;
         break;
     }
 
