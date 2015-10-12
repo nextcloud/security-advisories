@@ -1,5 +1,5 @@
 {
-    "Title": "PHP arbitrary class instantiiation in \"files_external\"",
+    "Title": "PHP arbitrary class instantiation in \"files_external\"",
     "Timestamp": 1443624831,
     "Type": "RCE",
     "Risk": 3,
@@ -14,7 +14,7 @@
     "Affected": [
         {
             "Version": "8.1.2",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2015-7699",
             "Operator": "<",
             "Commits": [
                 "core/a1706f61aaf822aeba4ea9e84b53c5cea984f8e4"
