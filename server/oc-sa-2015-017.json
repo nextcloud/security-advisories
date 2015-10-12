@@ -14,7 +14,7 @@
     "Affected": [
         {
             "Version": "8.1.2",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2015-7698",
             "Operator": "<",
             "Commits": [
                 "core/8c145541f65592a4d2d7de50ecfa1b0698496cb8"
