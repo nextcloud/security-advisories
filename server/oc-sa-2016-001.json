@@ -1,0 +1,59 @@
+{
+    "Title": "Reflected XSS in OCS provider discovery",
+    "Timestamp": 1452040833,
+    "Type": "XSS",
+    "Risk": 1,
+    "CVSS2": {
+        "score": 4.3,
+        "vector": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+    },
+    "CWE": {
+        "id": 79,
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    },
+    "Affected": [
+        {
+            "Version": "8.2.2",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/cccf4b607340f52cd0e9301c6e2813c121f2c236"
+            ]
+        },
+        {
+            "Version": "8.1.5",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/ada757317422ab9be36e10a7b9a2a5597063521f"
+            ]
+        },
+        {
+            "Version": "8.0.10",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/1d650169804b37b7e9864c8032c67dd48c99d08d"
+            ]
+        },
+        {
+            "Version": "7.0.12",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/85e068a723c09d0f01ab3e10aa6a3f6a8c4c3227"
+            ]
+        }
+    ],
+    "Description": "<p>A Cross-site scripting (XSS) vulnerability in the OCS discovery provider in ownCloud Servers allows remote attackers to inject arbitrary web script or HTML via the URL resulting in a reflected Cross-Site-Scripting.</p><p>Since ownCloud employs a strict Content-Security-Policy that forbids inline script execution this bug is unlikely to be exploitable on recent browsers that support Content-Security-Policy. (Firefox >= 23, Chrome >= 25, Safari >= 7, Microsoft Edge)</p>",
+    "ActionTaken": "<p>The vulnerable component is now properly sanitizing the output.</p>",
+    "Acknowledgment":[
+        {
+            "Name":"Lukas Reschke",
+            "Mail":"lukas@owncloud.com",
+            "Company":"ownCloud Inc.",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}

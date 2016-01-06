@@ -1,0 +1,59 @@
+{
+    "Title": "Disclosure of files that begin with \".v\" due to unchecked return value",
+    "Timestamp": 1452040833,
+    "Type": "Directory Listening",
+    "Risk": 1,
+    "CVSS2": {
+        "score": 4.3,
+        "vector": "AV:N/AC:M/Au:S/C:P/I:N/A:N"
+    },
+    "CWE": {
+        "id": 252,
+        "name": "Unchecked Return Value"
+    },
+    "Affected": [
+        {
+            "Version": "8.2.2",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/b7c217290f0d1974c048bb467e2c3cee0bbc6fc2"
+            ]
+        },
+        {
+            "Version": "8.1.5",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/51c6cd5c6a725b4849d995049163a0b87a9c3a58"
+            ]
+        },
+        {
+            "Version": "8.0.10",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/07fb3e329b37c19d9eb6a3a114e00a09f3f2798b"
+            ]
+        },
+        {
+            "Version": "7.0.12",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/f746100e13dcadf8a2b6d311422a1c66c959565c"
+            ]
+        }
+    ],
+    "Description": "<p>Due to a incorrect usage of the <code>getOwner</code> function of the ownCloud virtual filesystem,done authenticated users with incoming shares of other users are able to access files beginning with \".v\" of the sharing user. This can only be exploited if the \"files_versions\" application is enabled on the server.</p>",
+    "ActionTaken": "<p>The usage of <code>getOwner</code> has been corrected and ownCloud 9.0 will throw an exception in case the owner of an not existing file is requested.</p>",
+    "Acknowledgment":[
+        {
+            "Name":"Lukas Reschke",
+            "Mail":"lukas@owncloud.com",
+            "Company":"ownCloud Inc.",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}

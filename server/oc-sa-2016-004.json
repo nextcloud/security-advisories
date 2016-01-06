@@ -1,0 +1,42 @@
+{
+    "Title": "Full installation path disclosure through error message",
+    "Timestamp": 1452040833,
+    "Type": "Full Path Disclosure",
+    "Risk": 1,
+    "CVSS2": {
+        "score": 4.0,
+        "vector": "AV:N/AC:L/Au:S/C:P/I:N/A:N"
+    },
+    "CWE": {
+        "id": 210,
+        "name": "Information Exposure Through Self-generated Error Message"
+    },
+    "Affected": [
+        {
+            "Version": "8.1.4",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/9ece45ca286c9194d7e07db25ea5af0596a5c380",
+                "files_texteditor/5c40ba75d0b7b25daac96703a7f8aae1330438c9"
+            ]
+        },
+        {
+            "Version": "8.0.9",
+            "CVE": "CVE assignment pending",
+            "Operator": "<",
+            "Commits": [
+                "core/6897cbebc05fb4daa6b81daaac9b181120fcf529"
+            ]
+        }
+    ],
+    "Description": "<p>ownCloud returns exception error messages to the user in two different places, allowing an authenticated adversary to gain information about the installation path of the ownCloud instance. There is no further information disclosure.</p>",
+    "ActionTaken": "<p>The vulnerable components have been adjusted to not leak the exception error message and thus not disclose the server installation path.</p>",
+    "Acknowledgment":[
+        {
+            "Name":"Md. Ishrat Shahriyar",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}

@@ -22,7 +22,7 @@
         },
         {
             "Version": "8.0.7",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2015-7699",
             "Operator": "<",
             "Commits": [
                 "core/595381b9bd5676492ff8957de0590982ed1864a4"
@@ -30,7 +30,7 @@
         },
         {
             "Version": "7.0.9",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2015-7699",
             "Operator": "<",
             "Commits": [
                 "core/b05e178bbf884b120d1106e6a28f35aa50d6d06f"
