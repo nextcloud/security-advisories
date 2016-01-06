@@ -14,7 +14,7 @@
     "Affected": [
         {
             "Version": "8.2.2",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2016-1499",
             "Operator": "<",
             "Commits": [
                 "core/703b6d1803d776122ec0604cf0f3ab807033206e"
@@ -22,7 +22,7 @@
         },
         {
             "Version": "8.1.5",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2016-1499",
             "Operator": "<",
             "Commits": [
                 "core/a4a7ee1761ddd1681e7a8d5868ae4a6c671495fa"
@@ -30,7 +30,7 @@
         },
         {
             "Version": "8.0.10",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2016-1499",
             "Operator": "<",
             "Commits": [
                 "core/fab59179f1661da4862336fb8ea450c80def26d4"

@@ -14,7 +14,7 @@
     "Affected": [
         {
             "Version": "8.1.4",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2016-1501",
             "Operator": "<",
             "Commits": [
                 "core/9ece45ca286c9194d7e07db25ea5af0596a5c380",
@@ -23,7 +23,7 @@
         },
         {
             "Version": "8.0.9",
-            "CVE": "CVE assignment pending",
+            "CVE": "CVE-2016-1501",
             "Operator": "<",
             "Commits": [
                 "core/6897cbebc05fb4daa6b81daaac9b181120fcf529"
