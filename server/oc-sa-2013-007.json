@@ -10,7 +10,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Due to not properly checking the ownership of an calendar, an authenticated attacker is able to download calendars of other users via the “calid” GET parameter to export.php in /apps/calendar/</p>",
+   "Description":"<p>Due to not properly checking the ownership of an calendar, an authenticated attacker is able to download calendars of other users via the \"calid\" GET parameter to export.php in /apps/calendar/</p>",
    "Acknowledgment":[
       {
          "Name":"Romain Severin",

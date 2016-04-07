@@ -20,7 +20,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Due to not rejecting “\\” as path separator in all ownCloud versions prior to 5.0.4 including the 4.x branch an authenticated remote attacker is able to download arbitrary files from the server when running under Windows.</p><p>This vulnerability exists inside our used DAV implementation “SabreDAV” and was found by the ownCloud security team. SabreDAV released fixed versions to address this problem.</p>",
+   "Description":"<p>Due to not rejecting \"\\\" as path separator in all ownCloud versions prior to 5.0.4 including the 4.x branch an authenticated remote attacker is able to download arbitrary files from the server when running under Windows.</p><p>This vulnerability exists inside our used DAV implementation \"SabreDAV\" and was found by the ownCloud security team. SabreDAV released fixed versions to address this problem.</p>",
    "Acknowledgment":[
       {
          "Name":"Lukas Reschke",
