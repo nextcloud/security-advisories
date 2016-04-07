@@ -27,6 +27,7 @@ $components = [
     'mobile',
 ];
 $advisorySideBar = '';
+$allBugs = [];
 
 foreach($components as $component) {
     echo "… Iterating $component …\n";
@@ -157,8 +158,66 @@ foreach($components as $component) {
         break;
     }
 
-
+    $allBugs[$component] = $componentBugs;
 }
+
+// Create RSS feed
+$identifiersDone = [];
+$rssEntries = [];
+$rss = '<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+ <title>ownCloud Security Advisories RSS Feed</title>
+ <link>https://owncloud.org/security/advisories/</link>
+ <description>The ownCloud security advisories as a RSS feed</description>
+ <ttl>1800</ttl>';
+foreach($allBugs as $category => $advisories) {
+    foreach($advisories as $advisories) {
+        foreach ($advisories as $identifier => $title) {
+            if (!isset($identifiersDone[$identifier])) {
+                $identifiersDone[$identifier] = 'true';
+                $advisoryContent = json_decode(file_get_contents(__DIR__ . '/../' . strtolower($category) . '/' . $identifier . '.json'), true);
+                switch (strtolower($category)) {
+                    case 'mobile':
+                        $categoryText = 'Mobile App';
+                        break;
+                    case 'desktop':
+                        $categoryText = 'Desktop Client';
+                        break;
+                    case 'server':
+                        $categoryText = 'Server';
+                        break;
+                    default:
+                        throw new Exception('Should never happen');
+                        break;
+                }
+                $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
+                $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://owncloud.org/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
+                $title = htmlentities($categoryText . ': ' . $title . ' (' . $identifier . ')');
+                $date = date('r', $advisoryContent['Timestamp']);
+                $rssEntry = "<item>
+  <title>$title</title>
+  <description>$description</description>
+  <link>https://owncloud.org/security/advisory/?id=$identifier</link>
+  <guid isPermaLink=\"true\">https://owncloud.org/security/advisory/?id=$identifier</guid>
+  <pubDate>$date</pubDate>
+ </item>";
+                $rssEntries[$identifier] = $rssEntry;
+            }
+        }
+    }
+}
+ksort($rssEntries);
+$rssEntries = array_reverse($rssEntries);
+foreach($rssEntries as $entry) {
+    $rss.=$entry;
+}
+$rss .= '
+</channel>
+</rss>';
+
+file_put_contents('./out/advisories.rss', $rss);
+echo "Created RSS feed\n";
 
 file_put_contents('./out/advisory-side.php', $advisorySideBar);
 echo "Created advisory side bar\n";
