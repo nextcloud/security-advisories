@@ -71,7 +71,10 @@ foreach($components as $component) {
             if(isset($advisory['CVSS2'])) {
                 $cvss = '<p>CVSS v2 Base Score: '.$advisory['CVSS2']['score'].' (<a href="https://nvd.nist.gov/cvss.cfm?calculator&version=2&vector=('.$advisory['CVSS2']['vector'].')">'.$advisory['CVSS2']['vector'].'</a>)</p>';
             }
-            $content = str_replace('~~CVSS2~~', $cvss, $content);
+            if(isset($advisory['CVSS3'])) {
+                $cvss = '<p>CVSS v3 Base Score: '.$advisory['CVSS3']['score'].' (<a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/'.$advisory['CVSS3']['vector'].'">'.$advisory['CVSS3']['vector'].'</a>)</p>';
+            }
+            $content = str_replace('~~CVSS~~', $cvss, $content);
 
             $content = str_replace('~~DESCRIPTION~~', str_replace("</p>", "</p>\n", $advisory['Description']), $content);
 

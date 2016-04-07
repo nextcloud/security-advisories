@@ -12,7 +12,7 @@
         <h2>~~TITLE~~ (~~IDENTIFIER~~)</h2>
         <p>~~DATE~~</p>
         <p>Risk level: <strong>~~LEVEL~~</strong></p>
-        ~~CVSS2~~
+        ~~CVSS~~
         ~~CWE~~
         <h3>Description</h3>
         <p>~~DESCRIPTION~~</p>
