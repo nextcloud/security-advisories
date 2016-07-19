@@ -157,7 +157,7 @@ foreach($components as $component) {
         }
         $componentList .= "<p>Version $version</p>\n";
         foreach($bug as $identifier => $title) {
-            $componentList .= "<a href=\"/security/advisory?id=$identifier\">$title</a><br>\n";
+            $componentList .= "<a href=\"/security/advisory/?id=$identifier\">$title</a><br>\n";
         }
         $i++;
     }
@@ -169,7 +169,7 @@ foreach($components as $component) {
     foreach($componentBugs as $version => $bug) {
         $advisorySideBar .= "<br/><p>Nextcloud " . $component . " " . $version ."</p>\n";
         foreach($bug as $key => $title) {
-            $advisorySideBar .= "<a href=\"/security/advisory?id=".$key."\">".$title."</a><br/>\n";
+            $advisorySideBar .= "<a href=\"/security/advisory/?id=".$key."\">".$title."</a><br/>\n";
         }
         break;
     }
