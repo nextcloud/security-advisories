@@ -43,7 +43,7 @@ foreach($components as $component) {
 
 
             $content = str_replace('~~TITLE~~', $advisory['Title'], $content);
-            $content = str_replace('~~IDENTIFIER~~',  str_replace('c-sa', 'NC-SA', substr($fileinfo, 0, -5)), $content);
+            $content = str_replace('~~IDENTIFIER~~',  str_replace('nc-sa', 'NC-SA', substr($fileinfo, 0, -5)), $content);
             $content = str_replace('~~DATE~~', date('jS F o', $advisory['Timestamp']), $content);
 
             $risk = $advisory['Risk'];
