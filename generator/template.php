@@ -14,6 +14,7 @@
         <p>Risk level: <strong>~~LEVEL~~</strong></p>
         ~~CVSS~~
         ~~CWE~~
+        ~~HackerOne~~
         <h3>Description</h3>
         <p>~~DESCRIPTION~~</p>
         <h3>Affected Software</h3>

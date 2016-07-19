@@ -43,7 +43,7 @@ foreach($components as $component) {
 
 
             $content = str_replace('~~TITLE~~', $advisory['Title'], $content);
-            $content = str_replace('~~IDENTIFIER~~',  str_replace('c-sa', 'C-SA', substr($fileinfo, 0, -5)), $content);
+            $content = str_replace('~~IDENTIFIER~~',  str_replace('c-sa', 'NC-SA', substr($fileinfo, 0, -5)), $content);
             $content = str_replace('~~DATE~~', date('jS F o', $advisory['Timestamp']), $content);
 
             $risk = $advisory['Risk'];
@@ -68,6 +68,13 @@ foreach($components as $component) {
             }
             $content = str_replace('~~CWE~~', $cwe, $content);
 
+            $hackerOne = '';
+            if(isset($advisory['HackerOne'])) {
+                $hackerOne = '<p>HackerOne report: <a href="https://hackerone.com/reports/'.$advisory['HackerOne'].'">'.$advisory['HackerOne'] .'</a></p>';
+
+            }
+            $content = str_replace('~~HackerOne~~', $hackerOne, $content);
+
             $cvss = '';
             if(isset($advisory['CVSS2'])) {
                 $cvss = '<p>CVSS v2 Base Score: '.$advisory['CVSS2']['score'].' (<a href="https://nvd.nist.gov/cvss.cfm?calculator&version=2&vector=('.$advisory['CVSS2']['vector'].')">'.$advisory['CVSS2']['vector'].'</a>)</p>';
@@ -82,7 +89,7 @@ foreach($components as $component) {
             $affectedVersions = '';
             foreach($advisory['Affected'] as $affected) {
                 $operator = isset($affected['Operator']) ? $affected['Operator'].' ' : '';
-                $affectedVersions .= "<li>ownCloud ". ucfirst($component). " " . htmlentities($operator)."<strong>".$affected["Version"]."</strong> (".$affected["CVE"].")</li>\n";
+                $affectedVersions .= "<li>Nextcloud ". ucfirst($component). " " . htmlentities($operator)."<strong>".$affected["Version"]."</strong> (".$affected["CVE"].")</li>\n";
                 if(isset($affected['Commits'])) {
                     $affectedVersions .= "<ul>\n";
                     $commitsToList = count($affected['Commits']);
@@ -91,7 +98,7 @@ foreach($components as $component) {
                         $repository = explode('/', $commit)[0];
                         $commit = explode('/', $commit)[1];
 
-                        $affectedVersions .= "<li><a href=\"https://github.com/owncloud/".$repository."/commit/".$commit."\">".$repository."/".$commit."</a></li>\n";
+                        $affectedVersions .= "<li><a href=\"https://github.com/nextcloud/".$repository."/commit/".$commit."\">".$repository."/".$commit."</a></li>\n";
                     }
                     $affectedVersions .= "</ul>\n";
                 }
@@ -112,14 +119,23 @@ foreach($components as $component) {
                     $company = isset($acknowledgment['Company']) ? $acknowledgment['Company'] : '';
                     $mail = isset($acknowledgment['Mail']) ? $acknowledgment['Mail'] : '';
                     $reason = isset($acknowledgment['Reason']) ? $acknowledgment['Reason']: '';
-                    $acknowledgments .= '<li>'.$acknowledgment['Name'];
+                    $website = isset($acknowledgment['Website']) ? $acknowledgment['Website']: '';
+                    $acknowledgments .= '<li>';
+                    if($website) {
+                        $acknowledgments .= '<a href="'.$website.'" target="_blank" rel="noreferrer">';
+                    }
+                    $acknowledgments .= $acknowledgment['Name'];
                     if($company !== '') {
                         $acknowledgments .= ' - '.$company;
                     }
                     if($mail !== '') {
                         $acknowledgments .= ' ('.$mail.')';
                     }
-                    $acknowledgments .= ' - '.$reason.'</li>';
+                    $acknowledgments .= ' - '.$reason;
+                    if($website) {
+                        $acknowledgments .= '</a>';
+                    }
+                    $acknowledgments .= '</li>';
                 }
             }
             $content = str_replace('~~ACKNOWLEDGMENTS~~', $acknowledgments, $content);
@@ -151,7 +167,7 @@ foreach($components as $component) {
     // Create sidebar with bugs from the latest version
     $i = 0;
     foreach($componentBugs as $version => $bug) {
-        $advisorySideBar .= "<br/><p>ownCloud " . $component . " " . $version ."</p>\n";
+        $advisorySideBar .= "<br/><p>Nextcloud " . $component . " " . $version ."</p>\n";
         foreach($bug as $key => $title) {
             $advisorySideBar .= "<a href=\"/security/advisory?id=".$key."\">".$title."</a><br/>\n";
         }
@@ -167,9 +183,9 @@ $rssEntries = [];
 $rss = '<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
- <title>ownCloud Security Advisories RSS Feed</title>
- <link>https://owncloud.org/security/advisories/</link>
- <description>The ownCloud security advisories as a RSS feed</description>
+ <title>Nextcloud Security Advisories RSS Feed</title>
+ <link>https://nextcloud.com/security/advisories/</link>
+ <description>The Nextcloud security advisories as a RSS feed</description>
  <ttl>1800</ttl>';
 foreach($allBugs as $category => $advisories) {
     foreach($advisories as $advisories) {
@@ -192,14 +208,14 @@ foreach($allBugs as $category => $advisories) {
                         break;
                 }
                 $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
-                $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://owncloud.org/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
+                $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://nextcloud.com/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
                 $title = htmlentities($categoryText . ': ' . $title . ' (' . $identifier . ')');
                 $date = date('r', $advisoryContent['Timestamp']);
                 $rssEntry = "<item>
   <title>$title</title>
   <description>$description</description>
-  <link>https://owncloud.org/security/advisory/?id=$identifier</link>
-  <guid isPermaLink=\"true\">https://owncloud.org/security/advisory/?id=$identifier</guid>
+  <link>https://nextcloud.com/security/advisory/?id=$identifier</link>
+  <guid isPermaLink=\"true\">https://nextcloud.com/security/advisory/?id=$identifier</guid>
   <pubDate>$date</pubDate>
  </item>";
                 $rssEntries[$identifier] = $rssEntry;
