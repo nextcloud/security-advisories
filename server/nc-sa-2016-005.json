@@ -1,0 +1,34 @@
+{
+   "Title": "Read-only share recipient can restore old versions of file",
+   "Timestamp": 1468916769,
+   "Type": "Permission issues",
+   "Risk": 1,
+   "CVSS3": {
+       "score": 3.1,
+       "vector": "AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+       "id": 275,
+       "name": "Permission Issues"
+   },
+   "HackerOne": 146067,
+   "Affected":[
+      {
+         "Version":"9.0.52",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "server/1208953ba1d4d55a18a639846bbcdd66a2d5bc5e"
+         ]
+      }  
+   ],
+   "Description":"<p>The restore capability of Nextcloud was not verifying whether an user has only read-only access to a share. Thus an user with read-only access was able to restore old versions.</p>",
+   "ActionTaken": "<p>The permission check is now also performed on restore actions,</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Rudra Pratap Singh",
+         "Reason":"Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to Nextcloud 9.0.52.</p>"
+}

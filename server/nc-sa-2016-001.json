@@ -1,0 +1,36 @@
+{
+   "Title": "Stored XSS in \"gallery\" application",
+   "Timestamp": 1468916769,
+   "Type": "XSS",
+   "Risk": 2,
+   "CVSS3": {
+       "score": 6.4,
+       "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+       "id": 79,
+       "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+   },
+   "HackerOne": 145355,
+   "Affected":[
+      {
+         "Version":"9.0.52",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "gallery/6933d27afe518967bd1b60e6a7eacd88288929fc"
+         ]
+      }  
+   ],
+   "Description":"<p>Due to a recent migration of the Gallery app to the new sharing endpoint a parameter changed from an integer to a string value. This value wasn't sanitized before and was thus now vulnerable to a Cross-Site-Scripting attack.</p><p>To exploit this vulnerability an authenticated attacker has to share a folder with someone else, get them to open the shared folder in the Gallery app and open the sharing window there.</p><p>Since Nextcloud employes a strict Content-Security-Policy this vulnerability is only exploitable in browsers not supporting Content-Security-Policy. You can check at <a href=\"http://caniuse.com/#feat=contentsecuritypolicy\">caniuse.com</a> whether your browser supports CSP.</p>",
+   "ActionTaken": "<p>The user input is now properly sanitised before provided back to the user. </p>",
+   "Acknowledgment":[
+      {
+         "Name":"Frans Rosen",
+         "Company":"Detectify",
+         "Website":"https://www.detectify.com",
+         "Reason":"Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to Nextcloud 9.0.52.</p>"
+}

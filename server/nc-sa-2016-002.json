@@ -1,0 +1,34 @@
+{
+   "Title": "Log pollution can potentially lead to local HTML injection",
+   "Timestamp": 1468916769,
+   "Type": "XSS",
+   "Risk": 1,
+   "CVSS3": {
+       "score": 4.3,
+       "vector": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+       "id": 209,
+       "name": "Cross-Site Scripting Using MIME Type Mismatch"
+   },
+   "HackerOne": 146278,
+   "Affected":[
+      {
+         "Version":"9.0.52",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "server/94975af6db1551c2d23136c2ea22866a5b416070"
+         ]
+      }  
+   ],
+   "Description":"<p>The \"download log\" functionality in the admin screen is delivering the log in JSON format to the end-user. The file was delivered with an attachment disposition forcing the browser to download the document. However, Firefox running on Microsoft Windows would offer the user to open the data in the browser as HTML document. Thus any injected data in the log would be executed.</p><p>While the document would only be executed locally (thus on another scope) we have decided to fix this to protect our users.</p>",
+   "ActionTaken": "<p>The file is now delivered with a content-type of \"application/octet-stream\".</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Alejo Popovici",
+         "Reason":"Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to Nextcloud 9.0.52.</p>"
+}

@@ -1,0 +1,35 @@
+{
+   "Title": "Edit permission check not enforced on WebDAV COPY action",
+   "Timestamp": 1468916769,
+   "Type": "Permission issues",
+   "Risk": 2,
+   "CVSS3": {
+       "score": 3.1,
+       "vector": "AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+       "id": 275,
+       "name": "Permission Issues"
+   },
+   "HackerOne": 145950,
+   "Affected":[
+      {
+         "Version":"9.0.52",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "server/3491400261c1454a9a30d3ec96969573330120cc"
+         ]
+      }  
+   ],
+   "Description":"<p>The WebDAV endpoint was not properly checking the permission on a WebDAV \"COPY\" action. This allowed an authenticated attacker with access to a read-only share to put new files in there. It was not possible to modify existing files.</p>",
+   "ActionTaken": "<p>The permission check is now also performed on \"COPY\" actions,</p>",
+   "Acknowledgment":[
+      {
+         "Name":"Kumar Saurabh",
+         "Website": "http://www.ksaurabh.net",
+         "Reason":"Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution":"<p>It is recommended that all instances are upgraded to Nextcloud 9.0.52.</p>"
+}
