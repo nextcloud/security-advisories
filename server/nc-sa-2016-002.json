@@ -1,7 +1,6 @@
 {
    "Title": "Log pollution can potentially lead to local HTML injection",
    "Timestamp": 1468916769,
-   "Type": "XSS",
    "Risk": 1,
    "CVSS3": {
        "score": 4.3,

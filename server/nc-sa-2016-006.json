@@ -1,0 +1,44 @@
+{
+   "Title": "SMB User Authentication Bypass",
+   "Timestamp": 1476098466,
+   "Risk": 3,
+   "CVSS3": {
+       "score": 7.4,
+       "vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+       "id": 303,
+       "name": "Incorrect Implementation of Authentication Algorithms"
+   },
+   "HackerOne": 148151,
+   "Affected":[
+      {
+         "Version":"9.0.54",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "apps/decb91fd31f4ffab191cbf09ce4e5c55c67a4087"
+         ]
+      },
+      {
+         "Version":"10.0.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "apps/b85ace6840b8a6704641086bc3b8eb8e81cb2274"
+         ]
+      }
+   ],
+   "Description": "<p>Nextcloud includes an optional and not by default enabled SMB authentication component that allows to authenticate users against an SMB server.</p><p>This backend is implemented in a way that it tries to connect to a SMB server and if that succeeded consider the user logged-in.</p><p>The backend did not properly take into account SMB servers that any kind of anonymous auth configured. This is the default on SMB servers nowadays and allows an unauthenticated attacker to gain access to an account without valid credentials.</p><p><strong>Note:</strong> The SMB backend is disabled by default and requires manual configuration in the Nextcloud config file. If you have not configured the SMB backend then you're not affected by this vulnerability.</p><p><em><a href=\"https://rhinosecuritylabs.com/2016/08/operation-ownedcloud-exploitation-post-exploitation-persistence\">The reporter has published a blog post about this issue on their website as well.</a></em></p>",
+   "ActionTaken": "<p>The SMB backend is now performing an additional authentication attempt with invalid credentials. If that succeeds as well it assumes that anonymous authentications are enabled and denies the login attempt.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Dwight Hohnstein",
+         "Company": "Rhino Security Labs",
+         "Website": "https://rhinosecuritylabs.com/",
+         "Email": "dwight.hohnstein@rhinosecuritylabs.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.1.</p>"
+}

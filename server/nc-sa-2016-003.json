@@ -1,7 +1,6 @@
 {
    "Title": "Content-Spoofing in \"files\" app",
    "Timestamp": 1468916769,
-   "Type": "Content Spoofing",
    "Risk": 1,
    "CVSS3": {
        "score": 0,

@@ -1,7 +1,6 @@
 {
    "Title": "Edit permission check not enforced on WebDAV COPY action",
    "Timestamp": 1468916769,
-   "Type": "Permission issues",
    "Risk": 2,
    "CVSS3": {
        "score": 3.1,

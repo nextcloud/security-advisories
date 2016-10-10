@@ -1,7 +1,6 @@
 {
    "Title": "Stored XSS in \"gallery\" application",
    "Timestamp": 1468916769,
-   "Type": "XSS",
    "Risk": 2,
    "CVSS3": {
        "score": 6.4,

@@ -1,7 +1,6 @@
 {
    "Title": "Read-only share recipient can restore old versions of file",
    "Timestamp": 1468916769,
-   "Type": "Permission issues",
    "Risk": 1,
    "CVSS3": {
        "score": 3.1,
@@ -23,7 +22,7 @@
       }  
    ],
    "Description":"<p>The restore capability of Nextcloud was not verifying whether an user has only read-only access to a share. Thus an user with read-only access was able to restore old versions.</p>",
-   "ActionTaken": "<p>The permission check is now also performed on restore actions,</p>",
+   "ActionTaken": "<p>The permission check is now also performed on restore actions.</p>",
    "Acknowledgment":[
       {
          "Name":"Rudra Pratap Singh",

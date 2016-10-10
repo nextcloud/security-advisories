@@ -1,0 +1,33 @@
+{
+   "Title": "Stored XSS in Gallery application",
+   "Timestamp": 1476098466,
+   "Risk": 2,
+   "CVSS3": {
+       "score": 6.1,
+       "vector": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+   },
+   "CWE": {
+       "id": 79,
+       "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+   },
+   "HackerOne": 165686,
+   "Affected":[
+      {
+         "Version":"10.0.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "gallery/f9ef505c1d60c9041e251682e0f6b3daad952d58"
+         ]
+      }
+   ],
+   "Description": "<p>The gallery app was not properly sanitizing exception messages from the Nextcloud server. Due to an endpoint where an attacker could influence the error message this lead to a reflected Cross-Site-Scripting vulnerability.</p>",
+   "ActionTaken": "<p>Error messages are now properly sanitized.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Aliaksei Panamarenka",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 10.0.1.</p>"
+}

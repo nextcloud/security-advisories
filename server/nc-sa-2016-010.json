@@ -1,0 +1,45 @@
+{
+   "Title": "Content-Spoofing in \"files\" app",
+   "Timestamp": 1476098466,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 3.1,
+     "vector": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+     "id": 451,
+     "name": "User Interface (UI) Misrepresentation of Critical Information"
+   },
+   "HackerOne": 154827,
+   "Affected":[
+      {
+         "Version":"10.0.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+           "server/ed0f0db5fa0aff04594cb0f973ae4c22b17a175a",
+           "server/c3ae21fef2880c9fe44e8fdbe1262ac7f9716f14",
+           "server/df50e967dbd27b13875625b7dd3189294619b071"
+         ]
+      },
+     {
+       "Version":"9.0.54",
+       "CVE":"CVE assignment pending",
+       "Operator":"<",
+       "Commits": [
+         "server/778ae8abd54c378fc4781394bbedc7a2ee3095e1",
+         "server/5dd211cc8845fd4533966bf8d7a7f2a6359ea013",
+         "server/1352365e8bf5ea49da3dc82b1ccf7ddb659ae960"
+       ]
+     }
+   ],
+   "Description":"<p>The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.</p>",
+   "ActionTaken": "<p>The passed parameter is now verified.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "lmx",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.1.</p>"
+}

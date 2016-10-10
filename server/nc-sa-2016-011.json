@@ -1,0 +1,41 @@
+{
+   "Title": "Content-Spoofing in \"dav\" app",
+   "Timestamp": 1476098466,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 3.1,
+     "vector": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+     "id": 451,
+     "name": "User Interface (UI) Misrepresentation of Critical Information"
+   },
+   "HackerOne": 154827,
+   "Affected":[
+      {
+         "Version":"10.0.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+           "server/7350e13113c8ed484727a5c25331ec11d4d59f5f"
+         ]
+      },
+     {
+       "Version":"9.0.54",
+       "CVE":"CVE assignment pending",
+       "Operator":"<",
+       "Commits": [
+         "server/a4cfb3ddc1f4cdb585e05c0e9b2f8e52a0e2ee3e"
+       ]
+     }
+   ],
+   "Description":"<p>The exception message displayed on the DAV endpoints contained partially user-controllable input leading to a potential misrepresentation of information.</p>",
+   "ActionTaken": "<p>The user-controlled content has been removed from the exception message.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "YoKo Acc",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.1.</p>"
+}

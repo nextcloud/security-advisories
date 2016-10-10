@@ -1,0 +1,44 @@
+{
+   "Title": "Improper authorization check on removing shares",
+   "Timestamp": 1476098466,
+   "Risk": 1,
+   "CVSS3": {
+       "score": 2.6,
+       "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:L"
+   },
+   "CWE": {
+       "id": 285,
+       "name": "Improper Authorization"
+   },
+   "HackerOne": 153905,
+   "Affected":[
+      {
+         "Version":"9.0.54",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "server/a5471b4a3e3f30e99e4de39c97c0c3b3c2f1618f",
+            "server/3387e5d00fcf6b2ea6b285a091e5743f545e7202"
+         ]
+      },
+      {
+         "Version":"10.0.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "server/7289cb5ec0b812992ab0dfb889744b94bc0994f0",
+            "server/e2c4f4f9aa11bc92e8f2212cce73841b922187e8"
+         ]
+      }
+   ],
+   "Description": "<p>The Sharing Backend as implemented in Nextcloud does differentiate between shares to users and groups. In case of a received group share, users should be able to unshare the file to themselves but not to the whole group. The previous API implementation did simply unshare the file to all users in the group.</p>",
+   "ActionTaken": "<p>Additional access control checks have been added to the sharing API.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Nguyen Van Thang",
+         "Website": "https://www.facebook.com/profile.php?id=100006312211628",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.0.</p>"
+}

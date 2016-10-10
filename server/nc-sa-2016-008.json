@@ -1,0 +1,36 @@
+{
+   "Title": "Stored XSS in CardDAV image export",
+   "Timestamp": 1476098466,
+   "Risk": 2,
+   "CVSS3": {
+       "score": 5.4,
+       "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+   },
+   "CWE": {
+       "id": 79,
+       "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+   },
+   "HackerOne": 163338,
+   "Affected":[
+      {
+         "Version":"10.0.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<",
+         "Commits": [
+            "server/68ab8325c799d20c1fb7e98d670785176590e7d0",
+         ]
+      }
+   ],
+   "Description": "<p>The CardDAV image export functionality as implemented in Nextcloud allows the download of images stored within a vCard. Due to not performing any kind of verification on the image content this is prone to a stored Cross-Site Scripting attack.</p><p><strong>Note:</strong> Nextcloud employs a very strict Content Security Policy on the DAV endpoints. This is thus only exploitable on browsers that don't support Content Security Policy.</p>",
+   "ActionTaken": "<p>The mimetype of the exported image is now compared with a whitelist as well as download disposition headers have been set on the response.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Lukas Reschke",
+         "Website": "https://nextcloud.com",
+         "Company": "Nextcloud GmbH",
+         "Email": "lukas@nextcloud.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 10.0.1.</p>"
+}
