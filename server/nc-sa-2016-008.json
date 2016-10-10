@@ -17,7 +17,7 @@
          "CVE":"CVE assignment pending",
          "Operator":"<",
          "Commits": [
-            "server/68ab8325c799d20c1fb7e98d670785176590e7d0",
+            "server/68ab8325c799d20c1fb7e98d670785176590e7d0"
          ]
       }
    ],

@@ -10,7 +10,7 @@
      "id": 451,
      "name": "User Interface (UI) Misrepresentation of Critical Information"
    },
-   "HackerOne": 154827,
+   "HackerOne": 149798,
    "Affected":[
       {
          "Version":"10.0.1",
