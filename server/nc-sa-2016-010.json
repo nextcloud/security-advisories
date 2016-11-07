@@ -38,6 +38,7 @@
    "Acknowledgment":[
       {
          "Name": "lmx",
+         "Website": "https://hackerone.com/lmx",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],

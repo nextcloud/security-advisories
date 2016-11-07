@@ -33,7 +33,9 @@
    "ActionTaken": "<p>The user-controlled content has been removed from the exception message.</p>",
    "Acknowledgment":[
       {
-         "Name": "YoKo Acc",
+         "Name": "YoKo Kho",
+         "Company": "MII CAS",
+         "Website": "https://twitter.com/YoKoAcc",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],

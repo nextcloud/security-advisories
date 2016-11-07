@@ -1,5 +1,5 @@
 {
-   "Title": "Stored XSS in Gallery application",
+   "Title": "Reflected XSS in Gallery application",
    "Timestamp": 1476098466,
    "Risk": 2,
    "CVSS3": {
