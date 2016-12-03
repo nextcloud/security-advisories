@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"9.0.52",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2016-9461",
          "Operator":"<",
          "Commits": [
             "server/3491400261c1454a9a30d3ec96969573330120cc"

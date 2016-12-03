@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"10.0.1",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2016-9468",
          "Operator":"<",
          "Commits": [
            "server/7350e13113c8ed484727a5c25331ec11d4d59f5f"
@@ -22,7 +22,7 @@
       },
      {
        "Version":"9.0.54",
-       "CVE":"CVE assignment pending",
+       "CVE":"CVE-2016-9468",
        "Operator":"<",
        "Commits": [
          "server/a4cfb3ddc1f4cdb585e05c0e9b2f8e52a0e2ee3e"

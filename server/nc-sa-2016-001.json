@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"9.0.52",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2016-7419",
          "Operator":"<",
          "Commits": [
             "gallery/6933d27afe518967bd1b60e6a7eacd88288929fc"

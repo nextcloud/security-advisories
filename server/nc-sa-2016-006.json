@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"9.0.54",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2016-9463",
          "Operator":"<",
          "Commits": [
             "apps/decb91fd31f4ffab191cbf09ce4e5c55c67a4087"
@@ -22,7 +22,7 @@
       },
       {
          "Version":"10.0.1",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2016-9463",
          "Operator":"<",
          "Commits": [
             "apps/b85ace6840b8a6704641086bc3b8eb8e81cb2274"
