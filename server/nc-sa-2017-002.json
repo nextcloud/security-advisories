@@ -1,0 +1,37 @@
+{
+   "Title": "Creation of folders in read-only folders despite lacking permissions",
+   "Timestamp": 1486290968,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 4.1,
+     "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:L/A:N"
+   },
+   "CWE": {
+     "id": 275,
+     "name": "Permission Issues"
+   },
+   "HackerOne": 169680,
+   "Affected":[
+      {
+         "Version":"10.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+     {
+       "Version":"9.0.55",
+       "CVE":"CVE assignment pending",
+       "Operator":"<"
+     }
+   ],
+   "Description":"<p>Due to a logical error in the file caching layer an authenticated adversary is able to create empty folders inside a shared folder.</p><p>Note that this only affects folders and files that the adversary has at least read-only permissions for.</p>",
+   "ActionTaken": "<p>The file cache operation is now only performed if the file system operation succeeded.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "secator",
+         "Email": "info@secator.com",
+         "Website": "https://secator.com/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2.</p>"
+}

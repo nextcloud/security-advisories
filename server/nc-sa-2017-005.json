@@ -1,0 +1,35 @@
+{
+   "Title": "Bypassing quota limitation",
+   "Timestamp": 1486290968,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 0.0,
+     "vector": "AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:N"
+   },
+   "CWE": {
+     "id": 807,
+     "name": "Reliance on Untrusted Inputs in a Security Decision"
+   },
+   "HackerOne": 173622,
+   "Affected":[
+      {
+         "Version":"10.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+     {
+       "Version":"9.0.55",
+       "CVE":"CVE assignment pending",
+       "Operator":"<"
+     }
+   ],
+   "Description":"<p>Due to not properly sanitzing values provided by the `OC-Total-Length` HTTP header an authenticated adversary may be able to exceed their configured user quota. Thus using more space than allowed by the administrator.</p>",
+   "ActionTaken": "<p>The `OC-Total-Length` HTTP header is now properly sanitized.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Nordin",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2.</p>"
+}

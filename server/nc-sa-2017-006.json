@@ -1,0 +1,37 @@
+{
+   "Title": "Content-Spoofing in \"files\" app",
+   "Timestamp": 1486290968,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 3.1,
+     "vector": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+     "id": 451,
+     "name": "User Interface (UI) Misrepresentation of Critical Information"
+   },
+   "HackerOne": 179073,
+   "Affected":[
+      {
+         "Version":"10.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+     {
+       "Version":"9.0.55",
+       "CVE":"CVE assignment pending",
+       "Operator":"<"
+     }
+   ],
+   "Description":"<p>The top navigation bar displayed in the files list contained partially user-controllable input leading to a potential misrepresentation of information.</p>",
+   "ActionTaken": "<p>The user-controlled content is now not trusted anymore unless the folder structure exists on the file system.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Ahsan Tahir",
+         "Email": "mrahsan1337@gmail.com",
+         "Website": "https://twitter.com/AhsanTahirAT",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2.</p>"
+}

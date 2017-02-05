@@ -1,0 +1,37 @@
+{
+   "Title": "Permission increase on re-sharing via OCS API",
+   "Timestamp": 1486290968,
+   "Risk": 2,
+   "CVSS3": {
+     "score": 5.4,
+     "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+   },
+   "CWE": {
+     "id": 275,
+     "name": "Permission Issues"
+   },
+   "HackerOne": 169680,
+   "Affected":[
+      {
+         "Version":"10.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+     {
+       "Version":"9.0.55",
+       "CVE":"CVE assignment pending",
+       "Operator":"<"
+     }
+   ],
+   "Description":"<p>A permission related issue within the OCS sharing API allowed an authenticated adversary to reshare shared files with an increasing permission set. This may allow an attacker to edit files in a share despite having only a 'read' permission set.</p><p>Note that this only affects folders and files that the adversary has at least read-only permissions for.</p>",
+   "ActionTaken": "<p>The permissions are now properly checked on the OCS endpoint.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "secator",
+         "Email": "info@secator.com",
+         "Website": "https://secator.com/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2.</p>"
+}
