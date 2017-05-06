@@ -1,0 +1,42 @@
+{
+   "Title": "Stored XSS in Gallery application",
+   "Timestamp": 1494244800,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 3.0,
+     "vector": "AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+   },
+   "HackerOne": 222838,
+   "Affected":[
+      {
+         "Version":"11.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"10.0.5",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"9.0.58",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>A JavaScript library used by Nextcloud for sanitizing untrusted user-input suffered from a XSS vulnerability caused by a behaviour change in Safari 10.1 and 10.2.</p><p>Note that Nextcloud employs a strict Content-Security-Policy preventing exploitation of this XSS issue on modern web browsers.</p>",
+   "ActionTaken": "<p>The vulnerable library has been updated.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Lukas Reschke",
+         "Mail": "lukas@nextcloud.com",
+         "Company": "Nextcloud GmbH",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.58, 10.0.5 or 11.0.3.</p>"
+}

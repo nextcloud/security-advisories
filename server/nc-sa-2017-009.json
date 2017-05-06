@@ -1,0 +1,30 @@
+{
+   "Title": "Limitation of app specific password scope can be bypassed",
+   "Timestamp": 1494244800,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 3.0,
+     "vector": "AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:N/A:N"
+   },
+   "CWE": {
+     "id": 285,
+     "name": "Improper Authorization"
+   },
+   "HackerOne": 191979,
+   "Affected":[
+      {
+         "Version":"11.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Improper session handling allowed an application specific password without permission to the files access to the users file.</p>",
+   "ActionTaken": "<p>The permission check has been corrected and reviewed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Mmakosdel",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+}

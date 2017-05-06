@@ -1,0 +1,36 @@
+{
+   "Title": "Share tokens for public calendars disclosed",
+   "Timestamp": 1494244800,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 3.5,
+     "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 548,
+      "name": "Information Exposure Through Directory Listing"
+   },
+   "HackerOne": 203594,
+   "Affected":[
+      {
+         "Version":"11.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"10.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>A logical error caused disclosure of calendar and addressbook names to other logged-in users. Note that no actual content of the calendar and adressbook has been disclosed.</p>",
+   "ActionTaken": "<p>The error has been fixed and regression tests been added.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Julius Härtl",
+         "Website": "https://juliushaertl.de",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+}

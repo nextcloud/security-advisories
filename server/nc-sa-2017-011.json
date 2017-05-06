@@ -1,0 +1,32 @@
+{
+   "Title": "Share tokens for public calendars disclosed",
+   "Timestamp": 1494244800,
+   "Risk": 2,
+   "CVSS3": {
+     "score": 4.3,
+     "vector": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 548,
+      "name": "Information Exposure Through Directory Listing"
+   },
+   "HackerOne": 218876,
+   "Affected":[
+      {
+         "Version":"11.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>A logical error caused disclosure of valid share tokens for public calendars. Thus granting an attacker potentially access to publicly shared calendars without knowing the share token.</p>",
+   "ActionTaken": "<p>The error has been fixed and regression tests been added.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Lukas Reschke",
+         "Mail": "lukas@nextcloud.com",
+         "Company": "Nextcloud GmbH",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+}

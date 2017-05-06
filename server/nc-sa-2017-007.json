@@ -1,0 +1,30 @@
+{
+   "Title": "DOM XSS vulnerability in search dialogue",
+   "Timestamp": 1494244800,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 2.6,
+     "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+     "id": 79,
+     "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+   },
+   "HackerOne": 213227,
+   "Affected":[
+      {
+         "Version":"11.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Inadequate escaping lead to XSS vulnerability in the search module. To be exploitable an user has to write or paste malicious content into the search dialogue.</p>",
+   "ActionTaken": "<p>The content is now properly escaped, furthermore for Nextcloud 12 we have <a href=\"https://statuscode.ch/2017/03/CSP-unsafe-eval-and-jquery/\">hardened jQuery</a> to prevent such CSP bypasses.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Ahsan Khan",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+}
