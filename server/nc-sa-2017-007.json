@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"11.0.3",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2017-0890",
          "Operator":"<"
       }
    ],
