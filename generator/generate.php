@@ -35,7 +35,7 @@ foreach($components as $component) {
 
     $dir = new DirectoryIterator(__DIR__ . '/../' . $component);
     foreach ($dir as $fileinfo) {
-        if (!$fileinfo->isDot()) {
+        if (!$fileinfo->isDot() && $fileinfo->getFilename() !== '.gitkeep') {
             echo "Processing $fileinfo \n";
 
             $content = file_get_contents('./template.php');
