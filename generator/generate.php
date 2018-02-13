@@ -151,12 +151,13 @@ foreach($components as $component) {
     $componentBugs = array_reverse($componentBugs);
     $componentList = '';
     $i = 0;
-    foreach($componentBugs as $version => $bug) {
+    foreach($componentBugs as $version => $bugs) {
         if($i !== 0) {
             $componentList .= "<br/>";
         }
         $componentList .= "<p>Version $version</p>\n";
-        foreach($bug as $identifier => $title) {
+        ksort($bugs);
+        foreach($bugs as $identifier => $title) {
             $componentList .= "<a href=\"/security/advisory/?id=$identifier\">$title</a><br>\n";
         }
         $i++;
