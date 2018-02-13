@@ -14,12 +14,12 @@
    "Affected":[
       {
          "Version":"12.0.5",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2017-0936",
          "Operator":"<"
       },
       {
          "Version":"11.0.7",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2017-0936",
          "Operator":"<"
       }
    ],
