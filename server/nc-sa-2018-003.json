@@ -1,0 +1,35 @@
+{
+   "Title": "Improper validation on OAuth2 token endpoint",
+   "Timestamp": 1529582400,
+   "Risk": 2,
+   "CVSS3": {
+     "score": 6.4,
+     "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 20,
+      "name": "Improper Input Validation"
+   },
+   "HackerOne": 343111,
+   "Affected":[
+      {
+         "Version":"13.0.3",
+         "CVE":"CVE-2018-3761",
+         "Operator":"<"
+      },
+      {
+         "Version":"12.0.8",
+         "CVE":"CVE-2018-3761",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Improper validation of input allowed an attacker with access to the OAuth2 refresh token to obtain new tokens.</p>",
+   "ActionTaken": "<p>The error has been fixed according to RFC6749.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Mikael Karlsson",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 13.0.3.</p>"
+}
