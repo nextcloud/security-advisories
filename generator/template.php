@@ -5,10 +5,7 @@
 </div>
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <?php get_template_part('advisories/advisory-side'); ?>
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-12">
         <h2>~~TITLE~~ (~~IDENTIFIER~~)</h2>
         <p>~~DATE~~</p>
         <p>Risk level: <strong>~~LEVEL~~</strong></p>
