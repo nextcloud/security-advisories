@@ -25,6 +25,8 @@ $components = [
     'server',
     'desktop',
     'mobile',
+    'calendar',
+    'contacts',
 ];
 $advisorySideBar = '';
 $allBugs = [];
@@ -203,6 +205,12 @@ foreach($allBugs as $category => $advisories) {
                         break;
                     case 'server':
                         $categoryText = 'Server';
+                        break;
+                    case 'contacts':
+                        $categoryText = 'Contacts App';
+                        break;
+                    case 'calendar':
+                        $categoryText = 'Calendar App';
                         break;
                     default:
                         throw new Exception('Should never happen');
