@@ -28,7 +28,6 @@ $components = [
     'calendar',
     'contacts',
 ];
-$advisorySideBar = '';
 $allBugs = [];
 
 foreach($components as $component) {
@@ -148,39 +147,14 @@ foreach($components as $component) {
         }
     }
 
-    // Create advisory part files for complete overview
+    // Create complete overview list
     uksort($componentBugs, 'version_compare');
     $componentBugs = array_reverse($componentBugs);
-    $componentList = '';
-    $i = 0;
-    foreach($componentBugs as $version => $bugs) {
-        if($i !== 0) {
-            $componentList .= "<br/>";
-        }
-        $componentList .= "<p>Version $version</p>\n";
-        ksort($bugs);
-        foreach($bugs as $identifier => $title) {
-            $componentList .= "<a href=\"/security/advisory/?id=$identifier\">$title</a><br>\n";
-        }
-        $i++;
-    }
-    file_put_contents("./out/$component-list-part.php", $componentList);
-    echo "Created component list\n";
-
-    // Create sidebar with bugs from the latest version
-    $i = 0;
-    foreach($componentBugs as $version => $bug) {
-        $advisorySideBar .= "<br/><p>Nextcloud " . $component . " " . $version ."</p>\n";
-        foreach($bug as $key => $title) {
-            $advisorySideBar .= "<a href=\"/security/advisory/?id=".$key."\">".$title."</a><br/>\n";
-        }
-        break;
-    }
 
     $allBugs[$component] = $componentBugs;
 }
 
-// Create RSS feed
+// Create RSS feed & overview page
 $identifiersDone = [];
 $rssEntries = [];
 $rss = '<?xml version="1.0" encoding="UTF-8" ?>
@@ -218,6 +192,7 @@ foreach($allBugs as $category => $advisories) {
                 }
                 $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
                 $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://nextcloud.com/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
+                $originalTitle = $title;
                 $title = htmlentities($categoryText . ': ' . $title . ' (' . $identifier . ')');
                 $date = date('r', $advisoryContent['Timestamp']);
                 $rssEntry = "<item>
@@ -228,6 +203,30 @@ foreach($allBugs as $category => $advisories) {
   <pubDate>$date</pubDate>
  </item>";
                 $rssEntries[$identifier] = $rssEntry;
+
+                $identifier = ucfirst($identifier);
+                // overview page
+                foreach ($advisoryContent['Affected'] as $key => $value) {
+                    if ($categoryText === 'Server') {
+                        $categoryText = 'Nextcloud Server';
+                    }
+                    $version = $value['Version'];
+                    $dateTime = date('Y-m-d', $advisoryContent['Timestamp']);
+                    $listEntry = "<li><a href=\"/security/advisory/?id=$identifier\">" . htmlentities($originalTitle) . " ($identifier)</a> $dateTime</li>";
+
+                    $year = substr($identifier, 6, 4);
+                    $listId = $categoryText . ' ' . $version;
+                    if (!isset($listEntries[$year])) {
+                        $listEntries[$year] = [];
+                    }
+                    if (!isset($listEntries[$year][$dateTime])) {
+                        $listEntries[$year][$dateTime] = [];
+                    }
+                    if (!isset($listEntries[$year][$dateTime][$listId])) {
+                        $listEntries[$year][$dateTime][$listId] = [];
+                    }
+                    $listEntries[$year][$dateTime][$listId][] = $listEntry;
+                }
             }
         }
     }
@@ -244,5 +243,23 @@ $rss .= '
 file_put_contents('./out/advisories.rss', $rss);
 echo "Created RSS feed\n";
 
-file_put_contents('./out/advisory-side.php', $advisorySideBar);
-echo "Created advisory side bar\n";
+$fullList = '';
+
+foreach ($listEntries as $year => $datelist) {
+
+    $fullList .= "<hr>\n\n";
+    $fullList .= "<h2>$year</h2>\n\n";
+
+    krsort($datelist); // sort descending by date
+    foreach ($datelist as $key => $sublist) {
+        foreach ($sublist as $title => $entries) {
+            $fullList .= "<h3>$title</h3>\n<ul>\n\t";
+            $fullList .= implode("\n\t", $entries);
+            $fullList .= "\n</ul>\n\n";
+        }
+    }
+}
+
+file_put_contents('./out/full-list.php', $fullList);
+echo "Created full list\n";
+
