@@ -193,7 +193,7 @@ foreach($allBugs as $category => $advisories) {
                 $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
                 $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://nextcloud.com/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
                 $originalTitle = $title;
-                $title = htmlentities($categoryText . ': ' . $title . ' (' . $identifier . ')');
+                $title = htmlentities($categoryText . ': ' . $title . ' (' . ucfirst($identifier) . ')');
                 $date = date('r', $advisoryContent['Timestamp']);
                 $rssEntry = "<item>
   <title>$title</title>
