@@ -27,6 +27,7 @@ $components = [
     'mobile',
     'calendar',
     'contacts',
+    'talk',
 ];
 $allBugs = [];
 
@@ -185,6 +186,9 @@ foreach($allBugs as $category => $advisories) {
                         break;
                     case 'calendar':
                         $categoryText = 'Calendar App';
+                        break;
+                    case 'talk':
+                        $categoryText = 'Talk App';
                         break;
                     default:
                         throw new Exception('Should never happen');

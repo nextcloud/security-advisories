@@ -1,0 +1,31 @@
+{
+   "Title": "Stored XSS in autocomplete suggestions for file comments",
+   "Timestamp": 1533902400,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 2.1,
+     "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:N"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+   },
+   "Affected":[
+      {
+         "Version":"13.0.5",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>A missing sanitization of search results for an autocomplete field could lead to a stored XSS requiring user-interaction. The missing sanitization only affected user names, hence malicious search results could only be crafted by authenticated users.</p>",
+   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Joas Schilling",
+         "Mail": "coding@schilljs.com",
+         "Company": "Nextcloud GmbH",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 13.0.5.</p>"
+}
