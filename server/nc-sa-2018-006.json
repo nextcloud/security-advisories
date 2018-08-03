@@ -1,0 +1,36 @@
+{
+   "Title": "Improper validation of data passed to JSON encoder",
+   "Timestamp": 1533297600,
+   "Risk": 2,
+   "CVSS3": {
+     "score": 5.3,
+     "vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+      "id": 20,
+      "name": "Improper Input Validation"
+   },
+   "HackerOne": 232347,
+   "Affected":[
+      {
+         "Version":"12.0.3",
+         "CVE":"2018-3776",
+         "Operator":"<"
+      },
+      {
+         "Version":"11.0.5",
+         "CVE":"2018-3776",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Improper validation of input allowed an attacker to not have their actions logged to the audit log.</p>",
+   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Zhouyuan Yang",
+         "Company": "Fortinet's FortiGuard Labs",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to at least Nextcloud 12.0.3.</p>"
+}
