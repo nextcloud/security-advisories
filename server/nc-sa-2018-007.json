@@ -1,0 +1,30 @@
+{
+   "Title": "Bypass of 2 Factor Authentication",
+   "Timestamp": 1533297600,
+   "Risk": 3,
+   "CVSS3": {
+     "score": 8.1,
+     "vector": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 287,
+      "name": "Improper Authentication - Generic"
+   },
+   "HackerOne": 248656,
+   "Affected":[
+      {
+         "Version":"12.0.3",
+         "CVE":"2018-3775",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Improper authentication of the second factor challenge would allow an attacker that had access to user credentials to bypass the second factor validation completely.</p>",
+   "ActionTaken": "<p>The error has been fixed and regression tests are in place.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "kaysbugs",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded at least to Nextcloud 12.0.3.</p>"
+}
