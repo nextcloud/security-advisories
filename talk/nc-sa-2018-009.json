@@ -13,7 +13,7 @@
    "Affected":[
       {
          "Version":"3.2.5",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2018-3781",
          "Operator":"<"
       }
    ],
