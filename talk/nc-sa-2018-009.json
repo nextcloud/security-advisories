@@ -3,7 +3,7 @@
    "Timestamp": 1533902400,
    "Risk": 1,
    "CVSS3": {
-      "score": 2.1,
+      "score": 0.0,
       "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:N"
    },
    "CWE": {
