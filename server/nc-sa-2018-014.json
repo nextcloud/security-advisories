@@ -1,0 +1,31 @@
+{
+   "Title": "Improper access control checks for single share previews",
+   "Timestamp": 1540468800,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 4.8,
+     "vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+   },
+   "CWE": {
+      "id": 287,
+      "name": "Improper Authentication"
+   },
+   "HackerOne": 231917,
+   "Affected":[
+      {
+         "Version":"14.0.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>A missing check could give unauthorized access to the previews of single file password protected shares.</p>",
+   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Carl Pearson",
+         "Website": "https://cp270.wordpress.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 14.0.0.</p>"
+}

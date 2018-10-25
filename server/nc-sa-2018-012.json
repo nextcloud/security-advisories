@@ -1,0 +1,29 @@
+{
+   "Title": "Improper authentication on public shares",
+   "Timestamp": 1540468800,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 3.7,
+     "vector": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N"
+   },
+   "CWE": {
+      "id": 287,
+      "name": "Improper Authentication - Generic"
+   },
+   "Affected":[
+      {
+         "Version":"14.0.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>A missing access check could lead to continued access to password protected link shares when the owner had changed the password.</p>",
+   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Rudra Pratap Singh",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 14.0.0.</p>"
+}

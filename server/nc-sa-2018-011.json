@@ -1,0 +1,33 @@
+{
+   "Title": "Second factor authentication bypassed if provider fails to load",
+   "Timestamp": 1540468800,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 5.7,
+     "vector": "AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 287,
+      "name": "Improper Authentication - Generic"
+   },
+   "HackerOne": 317711,
+   "Affected":[
+      {
+         "Version":"14.0.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Missing state would not enforce the use of a second factor at login if the the provider of the second factor failed to load.</p>",
+   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Aleksa Sarai",
+         "Mail": "cyphar@cyphar.com",
+         "Company": "SUSE Linux GmbH",
+         "Website": "https://www.cyphar.com/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 14.0.0.</p>"
+}
