@@ -23,8 +23,8 @@
        "Operator":"<"
      }
    ],
-   "Description":"<p>The top navigation bar displayed in the files list contained partially user-controllable input leading to a potential misrepresentation of information.</p>",
-   "ActionTaken": "<p>The user-controlled content is now not trusted anymore unless the folder structure exists on the file system.</p>",
+   "Description":"The top navigation bar displayed in the files list contained partially user-controllable input leading to a potential misrepresentation of information.",
+   "ActionTaken": "The user-controlled content is now not trusted anymore unless the folder structure exists on the file system.",
    "Acknowledgment":[
       {
          "Name": "Ahsan Tahir",
@@ -33,5 +33,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2."
 }

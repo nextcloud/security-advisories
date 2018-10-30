@@ -28,13 +28,13 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Improper revalidation of permissions lead to not accepting access restrictions by acess tokens.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Description":"Improper revalidation of permissions lead to not accepting access restrictions by acess tokens.",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "Mohd Haji",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 14.0.0, Nextcloud 13.0.6 or Nextcloud 12.0.11.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 14.0.0, Nextcloud 13.0.6 or Nextcloud 12.0.11."
 }

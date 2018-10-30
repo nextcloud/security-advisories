@@ -18,13 +18,13 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Improper session handling allowed an application specific password without permission to the files access to the users file.</p>",
-   "ActionTaken": "<p>The permission check has been corrected and reviewed.</p>",
+   "Description":"Improper session handling allowed an application specific password without permission to the files access to the users file.",
+   "ActionTaken": "The permission check has been corrected and reviewed.",
    "Acknowledgment":[
       {
          "Name": "Mmakosdel",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 11.0.3."
 }

@@ -21,8 +21,8 @@
          ]
       }
    ],
-   "Description": "<p>The CardDAV image export functionality as implemented in Nextcloud allows the download of images stored within a vCard. Due to not performing any kind of verification on the image content this is prone to a stored Cross-Site Scripting attack.</p><p><strong>Note:</strong> Nextcloud employs a very strict Content Security Policy on the DAV endpoints. This is thus only exploitable on browsers that don't support Content Security Policy.</p>",
-   "ActionTaken": "<p>The mimetype of the exported image is now compared with a whitelist as well as download disposition headers have been set on the response.</p>",
+   "Description": "The CardDAV image export functionality as implemented in Nextcloud allows the download of images stored within a vCard. Due to not performing any kind of verification on the image content this is prone to a stored Cross-Site Scripting attack.<strong>Note:</strong> Nextcloud employs a very strict Content Security Policy on the DAV endpoints. This is thus only exploitable on browsers that don't support Content Security Policy.",
+   "ActionTaken": "The mimetype of the exported image is now compared with a whitelist as well as download disposition headers have been set on the response.",
    "Acknowledgment":[
       {
          "Name": "Lukas Reschke",
@@ -32,5 +32,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 10.0.1.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 10.0.1."
 }

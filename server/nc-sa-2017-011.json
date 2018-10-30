@@ -18,8 +18,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A logical error caused disclosure of valid share tokens for public calendars. Thus granting an attacker potentially access to publicly shared calendars without knowing the share token.</p>",
-   "ActionTaken": "<p>The error has been fixed and regression tests been added.</p>",
+   "Description":"A logical error caused disclosure of valid share tokens for public calendars. Thus granting an attacker potentially access to publicly shared calendars without knowing the share token.",
+   "ActionTaken": "The error has been fixed and regression tests been added.",
    "Acknowledgment":[
       {
          "Name": "Lukas Reschke",
@@ -28,5 +28,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 11.0.3."
 }

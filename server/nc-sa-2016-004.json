@@ -21,8 +21,8 @@
          ]
       }  
    ],
-   "Description":"<p>The WebDAV endpoint was not properly checking the permission on a WebDAV \"COPY\" action. This allowed an authenticated attacker with access to a read-only share to put new files in there. It was not possible to modify existing files.</p>",
-   "ActionTaken": "<p>The permission check is now also performed on \"COPY\" actions,</p>",
+   "Description":"The WebDAV endpoint was not properly checking the permission on a WebDAV \"COPY\" action. This allowed an authenticated attacker with access to a read-only share to put new files in there. It was not possible to modify existing files.",
+   "ActionTaken": "The permission check is now also performed on \"COPY\" actions,",
    "Acknowledgment":[
       {
          "Name":"Kumar Saurabh",
@@ -30,5 +30,5 @@
          "Reason":"Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution":"<p>It is recommended that all instances are upgraded to Nextcloud 9.0.52.</p>"
+   "Resolution":"It is recommended that all instances are upgraded to Nextcloud 9.0.52."
 }

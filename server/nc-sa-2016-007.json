@@ -31,8 +31,8 @@
          ]
       }
    ],
-   "Description": "<p>The Sharing Backend as implemented in Nextcloud does differentiate between shares to users and groups. In case of a received group share, users should be able to unshare the file to themselves but not to the whole group. The previous API implementation did simply unshare the file to all users in the group.</p>",
-   "ActionTaken": "<p>Additional access control checks have been added to the sharing API.</p>",
+   "Description": "The Sharing Backend as implemented in Nextcloud does differentiate between shares to users and groups. In case of a received group share, users should be able to unshare the file to themselves but not to the whole group. The previous API implementation did simply unshare the file to all users in the group.",
+   "ActionTaken": "Additional access control checks have been added to the sharing API.",
    "Acknowledgment":[
       {
          "Name": "Nguyen Van Thang",
@@ -40,5 +40,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.0.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.0."
 }

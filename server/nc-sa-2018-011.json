@@ -18,8 +18,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Missing state would not enforce the use of a second factor at login if the the provider of the second factor failed to load.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Description":"Missing state would not enforce the use of a second factor at login if the the provider of the second factor failed to load.",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "Aleksa Sarai",
@@ -29,5 +29,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 14.0.0.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 14.0.0."
 }

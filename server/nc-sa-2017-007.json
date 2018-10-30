@@ -18,13 +18,13 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Inadequate escaping lead to XSS vulnerability in the search module. To be exploitable an user has to write or paste malicious content into the search dialogue.</p>",
-   "ActionTaken": "<p>The content is now properly escaped, furthermore for Nextcloud 12 we have <a href=\"https://statuscode.ch/2017/03/CSP-unsafe-eval-and-jquery/\">hardened jQuery</a> to prevent such CSP bypasses.</p>",
+   "Description":"Inadequate escaping lead to XSS vulnerability in the search module. To be exploitable an user has to write or paste malicious content into the search dialogue.",
+   "ActionTaken": "The content is now properly escaped, furthermore for Nextcloud 12 we have <a href=\"https://statuscode.ch/2017/03/CSP-unsafe-eval-and-jquery/\">hardened jQuery</a> to prevent such CSP bypasses.",
    "Acknowledgment":[
       {
          "Name": "Ahsan Khan",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 11.0.3."
 }

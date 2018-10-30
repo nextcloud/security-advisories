@@ -28,8 +28,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Inadequate escaping of error messages leads to XSS vulnerabilities in multiple components.</p><p>Note that Nextcloud employs a strict Content-Security-Policy preventing exploitation of this XSS issue on modern web browsers.</p>",
-   "ActionTaken": "<p>Error messages are now properly escaped.</p>",
+   "Description":"Inadequate escaping of error messages leads to XSS vulnerabilities in multiple components.Note that Nextcloud employs a strict Content-Security-Policy preventing exploitation of this XSS issue on modern web browsers.",
+   "ActionTaken": "Error messages are now properly escaped.",
    "Acknowledgment":[
       {
          "Name": "Manuel Mancera",
@@ -37,5 +37,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.58, 10.0.5 or 11.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 9.0.58, 10.0.5 or 11.0.3."
 }

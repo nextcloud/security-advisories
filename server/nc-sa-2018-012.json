@@ -17,13 +17,13 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A missing access check could lead to continued access to password protected link shares when the owner had changed the password.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Description":"A missing access check could lead to continued access to password protected link shares when the owner had changed the password.",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "Rudra Pratap Singh",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 14.0.0.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 14.0.0."
 }

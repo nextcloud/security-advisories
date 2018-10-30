@@ -18,8 +18,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A missing check could give unauthorized access to the previews of single file password protected shares.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Description":"A missing check could give unauthorized access to the previews of single file password protected shares.",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "Carl Pearson",
@@ -27,5 +27,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 14.0.0.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 14.0.0."
 }

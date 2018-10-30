@@ -17,13 +17,13 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A missing sanitization of search results for an autocomplete field could lead to a stored XSS requiring user-interaction. The missing sanitization only affected group names, hence malicious search results could only be crafted by privileged users like admins or group admins.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Description":"A missing sanitization of search results for an autocomplete field could lead to a stored XSS requiring user-interaction. The missing sanitization only affected group names, hence malicious search results could only be crafted by privileged users like admins or group admins.",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "An anonymous hacker",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that the contacts app is upgraded to 2.1.2.</p>"
+   "Resolution": "It is recommended that the contacts app is upgraded to 2.1.2."
 }

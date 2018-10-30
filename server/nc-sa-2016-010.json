@@ -33,8 +33,8 @@
        ]
      }
    ],
-   "Description":"<p>The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.</p>",
-   "ActionTaken": "<p>The passed parameter is now verified.</p>",
+   "Description":"The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.",
+   "ActionTaken": "The passed parameter is now verified.",
    "Acknowledgment":[
       {
          "Name": "lmx",
@@ -42,5 +42,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.1.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 9.0.54 or 10.0.1."
 }
