@@ -20,6 +20,8 @@
         </ul>
         <h3>Action Taken</h3>
         <p>~~ACTION~~</p>
+        <h3>Resolution</h3>
+        <p>~~RESOLUTION~~</p>
         <h3>Acknowledgements</h3>
         <p>The Nextcloud team thanks the following people for their research and responsible disclosure of the above advisory:</p>
         <ul>

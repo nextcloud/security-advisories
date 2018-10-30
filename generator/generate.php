@@ -86,7 +86,7 @@ foreach($components as $component) {
             }
             $content = str_replace('~~CVSS~~', $cvss, $content);
 
-            $content = str_replace('~~DESCRIPTION~~', str_replace("</p>", "</p>\n", $advisory['Description']), $content);
+            $content = str_replace('~~DESCRIPTION~~', $advisory['Description'], $content);
 
             $affectedVersions = '';
             foreach($advisory['Affected'] as $affected) {
@@ -110,10 +110,12 @@ foreach($components as $component) {
 
             if(isset($advisory['ActionTaken'])) {
                 $actionTaken = $advisory['ActionTaken'];
-            } else {
-                $actionTaken = $advisory['Resolution'];
             }
-            $content = str_replace('~~ACTION~~',  str_replace("</p>", "</p>\n", $actionTaken), $content);
+            if(isset($advisory['Resolution'])) {
+                $resolution = $advisory['Resolution'];
+            }
+            $content = str_replace('~~ACTION~~', $actionTaken, $content);
+            $content = str_replace('~~RESOLUTION~~', $resolution, $content);
 
             $acknowledgments = '';
             if(isset($advisory['Acknowledgment'])) {
