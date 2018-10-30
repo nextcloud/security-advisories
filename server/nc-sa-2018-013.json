@@ -28,13 +28,13 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A bug causing session fixation could potentially allow an attacker to obtain access to password protected shares.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Description":"A bug causing session fixation could potentially allow an attacker to obtain access to password protected shares.",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "Anonymous hacker",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to at least Nextcloud 14.0.0, Nextcloud 13.0.3 or Nextcloud 12.0.8.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to at least Nextcloud 14.0.0, Nextcloud 13.0.3 or Nextcloud 12.0.8."
 }

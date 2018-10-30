@@ -21,13 +21,13 @@
          ]
       }  
    ],
-   "Description":"<p>The restore capability of Nextcloud was not verifying whether an user has only read-only access to a share. Thus an user with read-only access was able to restore old versions.</p>",
-   "ActionTaken": "<p>The permission check is now also performed on restore actions.</p>",
+   "Description":"The restore capability of Nextcloud was not verifying whether an user has only read-only access to a share. Thus an user with read-only access was able to restore old versions.",
+   "ActionTaken": "The permission check is now also performed on restore actions.",
    "Acknowledgment":[
       {
          "Name":"Rudra Pratap Singh",
          "Reason":"Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution":"<p>It is recommended that all instances are upgraded to Nextcloud 9.0.52.</p>"
+   "Resolution":"It is recommended that all instances are upgraded to Nextcloud 9.0.52."
 }

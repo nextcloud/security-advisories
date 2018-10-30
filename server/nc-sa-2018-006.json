@@ -23,8 +23,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Improper validation of input allowed an attacker to not have their actions logged to the audit log.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Description":"Improper validation of input allowed an attacker to not have their actions logged to the audit log.",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "Zhouyuan Yang",
@@ -32,5 +32,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to at least Nextcloud 12.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to at least Nextcloud 12.0.3."
 }

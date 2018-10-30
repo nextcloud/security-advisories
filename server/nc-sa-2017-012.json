@@ -23,8 +23,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A logical error caused disclosure of calendar and addressbook names to other logged-in users. Note that no actual content of the calendar and adressbook has been disclosed.</p>",
-   "ActionTaken": "<p>The error has been fixed and regression tests been added.</p>",
+   "Description":"A logical error caused disclosure of calendar and addressbook names to other logged-in users. Note that no actual content of the calendar and adressbook has been disclosed.",
+   "ActionTaken": "The error has been fixed and regression tests been added.",
    "Acknowledgment":[
       {
          "Name": "Julius Härtl",
@@ -32,5 +32,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 11.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 11.0.3."
 }

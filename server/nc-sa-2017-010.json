@@ -28,8 +28,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A JavaScript library used by Nextcloud for sanitizing untrusted user-input suffered from a XSS vulnerability caused by a behaviour change in Safari 10.1 and 10.2.</p><p>Note that Nextcloud employs a strict Content-Security-Policy preventing exploitation of this XSS issue on modern web browsers.</p>",
-   "ActionTaken": "<p>The vulnerable library has been updated.</p>",
+   "Description":"A JavaScript library used by Nextcloud for sanitizing untrusted user-input suffered from a XSS vulnerability caused by a behaviour change in Safari 10.1 and 10.2.Note that Nextcloud employs a strict Content-Security-Policy preventing exploitation of this XSS issue on modern web browsers.",
+   "ActionTaken": "The vulnerable library has been updated.",
    "Acknowledgment":[
       {
          "Name": "Lukas Reschke",
@@ -38,5 +38,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.58, 10.0.5 or 11.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 9.0.58, 10.0.5 or 11.0.3."
 }

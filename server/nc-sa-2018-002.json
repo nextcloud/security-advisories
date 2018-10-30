@@ -23,8 +23,8 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A missing check for read permissions allowed users that received an incomming share containing files tagged so they should be denied access to still request a preview for those files.</p>",
-   "ActionTaken": "<p>The error has been fixed and regression tests been added.</p>",
+   "Description":"A missing check for read permissions allowed users that received an incomming share containing files tagged so they should be denied access to still request a preview for those files.",
+   "ActionTaken": "The error has been fixed and regression tests been added.",
    "Acknowledgment":[
       {
          "Name": "Reinis Martinsons",
@@ -32,5 +32,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 13.0.3.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 13.0.3."
 }

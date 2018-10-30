@@ -23,8 +23,8 @@
        "Operator":"<"
      }
    ],
-   "Description":"<p>Due to a logical error in the file caching layer an authenticated adversary is able to create empty folders inside a shared folder.</p><p>Note that this only affects folders and files that the adversary has at least read-only permissions for.</p>",
-   "ActionTaken": "<p>The file cache operation is now only performed if the file system operation succeeded.</p>",
+   "Description":"Due to a logical error in the file caching layer an authenticated adversary is able to create empty folders inside a shared folder.Note that this only affects folders and files that the adversary has at least read-only permissions for.",
+   "ActionTaken": "The file cache operation is now only performed if the file system operation succeeded.",
    "Acknowledgment":[
       {
          "Name": "secator",
@@ -33,5 +33,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2."
 }

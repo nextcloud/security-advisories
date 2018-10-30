@@ -23,8 +23,8 @@
        "Operator":"<"
      }
    ],
-   "Description":"<p>Due to an error in the application logic an authenticated adversary may trigger an endless recursion in the application leading to a potential Denial of Service.</p>",
-   "ActionTaken": "<p>The code path leading to the endless recursion is now properly handled.</p>",
+   "Description":"Due to an error in the application logic an authenticated adversary may trigger an endless recursion in the application leading to a potential Denial of Service.",
+   "ActionTaken": "The code path leading to the endless recursion is now properly handled.",
    "Acknowledgment":[
       {
          "Name": "secator",
@@ -33,5 +33,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2.</p>"
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 9.0.55 or 10.0.2."
 }

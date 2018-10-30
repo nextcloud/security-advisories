@@ -21,8 +21,8 @@
          ]
       }  
    ],
-   "Description":"<p>Due to a recent migration of the Gallery app to the new sharing endpoint a parameter changed from an integer to a string value. This value wasn't sanitized before and was thus now vulnerable to a Cross-Site-Scripting attack.</p><p>To exploit this vulnerability an authenticated attacker has to share a folder with someone else, get them to open the shared folder in the Gallery app and open the sharing window there.</p><p>Since Nextcloud employes a strict Content-Security-Policy this vulnerability is only exploitable in browsers not supporting Content-Security-Policy. You can check at <a href=\"http://caniuse.com/#feat=contentsecuritypolicy\">caniuse.com</a> whether your browser supports CSP.</p>",
-   "ActionTaken": "<p>The user input is now properly sanitised before provided back to the user. </p>",
+   "Description":"Due to a recent migration of the Gallery app to the new sharing endpoint a parameter changed from an integer to a string value. This value wasn't sanitized before and was thus now vulnerable to a Cross-Site-Scripting attack.To exploit this vulnerability an authenticated attacker has to share a folder with someone else, get them to open the shared folder in the Gallery app and open the sharing window there.Since Nextcloud employes a strict Content-Security-Policy this vulnerability is only exploitable in browsers not supporting Content-Security-Policy. You can check at <a href=\"http://caniuse.com/#feat=contentsecuritypolicy\">caniuse.com</a> whether your browser supports CSP.",
+   "ActionTaken": "The user input is now properly sanitised before provided back to the user. ",
    "Acknowledgment":[
       {
          "Name":"Frans Rosen",
@@ -31,5 +31,5 @@
          "Reason":"Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution":"<p>It is recommended that all instances are upgraded to Nextcloud 9.0.52.</p>"
+   "Resolution":"It is recommended that all instances are upgraded to Nextcloud 9.0.52."
 }
