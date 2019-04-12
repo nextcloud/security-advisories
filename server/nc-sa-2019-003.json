@@ -1,0 +1,40 @@
+{
+   "Title": "Improper share updates could result in extended data access",
+   "Timestamp": 1555070400,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 9.6,
+     "vector": "AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 284,
+      "name": "Improper Access Control - Generic"
+   },
+   "HackerOne": 231917,
+   "Affected":[
+      {
+         "Version":"15.0.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"14.0.5",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"13.0.9",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A bug could expose more data in reshared link shares than intended by the sharer.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "H1 hacker",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 15.0.0, 14.0.5 or 13.0.9."
+}
