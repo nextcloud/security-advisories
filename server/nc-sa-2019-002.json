@@ -14,22 +14,22 @@
    "Affected":[
       {
          "Version":"15.0.0",
-         "CVE":"pending",
+         "CVE":"CVE assignment pending",
          "Operator":"<"
       },
       {
          "Version":"14.0.4",
-         "CVE":"pending",
+         "CVE":"CVE assignment pending",
          "Operator":"<"
       },
       {
          "Version":"13.0.8",
-         "CVE":"pending",
+         "CVE":"CVE assignment pending",
          "Operator":"<"
       },
       {
          "Version":"12.0.13",
-         "CVE":"pending",
+         "CVE":"CVE assignment pending",
          "Operator":"<"
       }
    ],
