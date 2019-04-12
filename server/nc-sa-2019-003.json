@@ -32,7 +32,8 @@
    "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
-         "Name": "H1 hacker",
+         "Name": "Fabian Riechsteiner",
+	 "Company": "recretix systems AG",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
