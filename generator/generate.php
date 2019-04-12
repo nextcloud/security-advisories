@@ -232,6 +232,7 @@ foreach($allBugs as $category => $advisories) {
                         $listEntries[$year][$dateTime][$listId] = [];
                     }
                     $listEntries[$year][$dateTime][$listId][] = $listEntry;
+                    rsort($listEntries[$year][$dateTime][$listId]);
                 }
             }
         }
