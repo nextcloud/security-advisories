@@ -10,7 +10,7 @@
       "id": 284,
       "name": "Improper Access Control - Generic"
    },
-   "HackerOne": 231917,
+   "HackerOne": 452854,
    "Affected":[
       {
          "Version":"15.0.0",
