@@ -1,0 +1,32 @@
+{
+   "Title": "Bypass lock protection in Android app",
+   "Timestamp": 123456789,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.9,
+      "vector": "AV:P/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 288,
+      "name": "Authentication Bypass Using an Alternate Path or Channel"
+   },
+   "HackerOne": 490946,
+   "Affected":[
+      {
+         "Version":"3.6.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Creating a fake multi-account and aborting the process would redirect the user to the default account of the device without asking for the lock pattern if one was set up.</p>",
+   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Julien Thomas",
+         "Company": "Protektoid.com project",
+         "Website": "https://twitter.com/julien_thomas",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that users upgrade to version 3.6.1.</p>"
+}
