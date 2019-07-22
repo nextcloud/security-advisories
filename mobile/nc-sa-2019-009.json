@@ -1,0 +1,30 @@
+{
+   "Title": "Improper sanitization of HTML in directory names",
+   "Timestamp": 123456789,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 0.0,
+      "vector": "AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:N"
+   },
+   "CWE": {
+      "id": 80,
+      "name": "Improper Neutralization of Script-Related HTML Tags in a Web Page"
+   },
+   "HackerOne": 631227,
+   "Affected":[
+      {
+         "Version":"3.7.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Some basic HTML tags were rendered as Markup in directory names.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Christian Angel",
+         "Website": "https://www.facebook.com/ian.phtml",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that users upgrade to version 3.7.0 or later.</p>"
+}
