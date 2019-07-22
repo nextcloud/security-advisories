@@ -18,7 +18,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>If an attacker has physical access to an Android smartphone without a screen lock, but with nextcloud installed and set up, he can easily access the nextcloud-files even if the nextcloud app is locked with a fingerprint or pin.</p>",
+   "Description":"<p>If an attacker has physical access to an Android smartphone without a screen lock, but with nextcloud installed and set up, they can easily access the nextcloud-files even if the nextcloud app is locked with a fingerprint or pin.</p>",
    "Acknowledgment":[
       {
          "Name": "Volker Weißmann",

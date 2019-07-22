@@ -1,0 +1,29 @@
+{
+   "Title": "Bypass lock protection in Android app",
+   "Timestamp": 123456789,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.9,
+      "vector": "AV:P/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 288,
+      "name": "Authentication Bypass Using an Alternate Path or Channel"
+   },
+   "HackerOne": 507172,
+   "Affected":[
+      {
+         "Version":"3.6.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>If an attacker has physical access to an Android smartphone without a screen lock, but with nextcloud installed and set up, they can circumvent the passcode protection by repeatedly opening and closing the app in a very short time.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Mathijs van Veluw",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that users upgrade to version 3.6.1 or later.</p>"
+}
