@@ -1,0 +1,31 @@
+{
+   "Title": "Query restriction bypass on exposed FileContentProvider in Android app",
+   "Timestamp": 1564135200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 2.7,
+      "vector": "AV:P/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:L"
+   },
+   "CWE": {
+      "id": 89,
+      "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+   },
+   "HackerOne": 518669,
+   "Affected":[
+      {
+         "Version":"3.6.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>Not strictly enough sanitization allowed an attacker to get content information from protected tables when using custom queries.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "Julien Thomas",
+         "Company": "Protektoid.com project",
+         "Website": "https://twitter.com/julien_thomas",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that users upgrade to version 3.6.1 or later.</p>"
+}
