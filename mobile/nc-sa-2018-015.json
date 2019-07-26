@@ -1,0 +1,31 @@
+{
+   "Title": "Improper check for access to application database",
+   "Timestamp": 1564128000,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 1.8,
+     "vector": "AV:L/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 284,
+      "name": "Improper Access Control"
+   },
+   "HackerOne": 331302,
+   "Affected":[
+      {
+         "Version":"3.2.0",
+         "CVE":"CVE-2018-3765",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>A too permissive check allowed an installed application that contained the Nextcloud client package name to obtain access to the database of the Nextcloud application. At time of disclosure there are no applications with in the Google Play Store that fullfill this requirement.</p>",
+   "ActionTaken": "<p>The error has been fixed.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "TBD",
+         "Website": "TBD",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that users upgrade to version 3.2.0.</p>"
+}
