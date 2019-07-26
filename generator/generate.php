@@ -24,7 +24,7 @@ date_default_timezone_set('Europe/Zurich');
 $components = [
     'server',
     'desktop',
-    'mobile',
+    'android',
     'calendar',
     'contacts',
     'talk',
@@ -175,8 +175,8 @@ foreach($allBugs as $category => $advisories) {
                 $identifiersDone[$identifier] = 'true';
                 $advisoryContent = json_decode(file_get_contents(__DIR__ . '/../' . strtolower($category) . '/' . $identifier . '.json'), true);
                 switch (strtolower($category)) {
-                    case 'mobile':
-                        $categoryText = 'Mobile App';
+                    case 'android':
+                        $categoryText = 'Android App';
                         break;
                     case 'desktop':
                         $categoryText = 'Desktop Client';
