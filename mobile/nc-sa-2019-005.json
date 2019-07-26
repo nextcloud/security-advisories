@@ -1,0 +1,29 @@
+{
+   "Title": "SQL injection in Android app content provider",
+   "Timestamp": 1564135200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 2.7,
+      "vector": "AV:P/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:L"
+   },
+   "CWE": {
+      "id": 89,
+      "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+   },
+   "HackerOne": 291764,
+   "Affected":[
+      {
+         "Version":"3.0.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"<p>The content provider of the app accepted arbitrary strings in the field list of the returned file list. This allowed an attacker to run harmful queries, destroying the local cache of the android app. The server data however was never in danger, so removing the account and setting it up again can fix all problems.</p>",
+   "Acknowledgment":[
+      {
+         "Name": "David Enos (bluedangerforyou)",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "<p>It is recommended that users upgrade to version 3.0.0 or later.</p>"
+}
