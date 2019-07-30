@@ -10,7 +10,7 @@
       "id": 287,
       "name": "Improper Authentication"
    },
-   "HackerOne": 231917,
+   "HackerOne": 476615,
    "Affected":[
       {
          "Version":"15.0.1",
