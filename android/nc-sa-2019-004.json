@@ -19,7 +19,7 @@
       }
    ],
    "Description":"<p>Creating a fake multi-account and aborting the process would redirect the user to the default account of the device without asking for the lock pattern if one was set up.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "Julien Thomas",
