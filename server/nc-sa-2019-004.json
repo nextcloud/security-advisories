@@ -1,0 +1,41 @@
+{
+   "Title": "Reflected XSS in svg logo generation",
+   "Timestamp": 1564747200,
+   "Risk": 1,
+   "CVSS3": {
+     "score": 6.5,
+     "vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Cross-site Scripting (XSS) - Reflected"
+   },
+   "HackerOne": 605915,
+   "Affected":[
+      {
+         "Version":"16.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"15.0.9",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"14.0.13",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A reflected Cross-Site Scripting vunerability was discovered in the svg generation.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Frederik Braun",
+	 "Website": "https://frederik-braun.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that all instances are upgraded to Nextcloud 16.0.2, 15.0.9 or 14.0.13."
+}
