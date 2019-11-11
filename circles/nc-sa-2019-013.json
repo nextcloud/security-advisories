@@ -1,0 +1,35 @@
+{
+   "Title": "Removing emails from circles does not revoke access to shared items",
+   "Timestamp": 1570363200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 2.0,
+      "vector": "AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 285,
+      "name": "Improper Authorization"
+   },
+   "HackerOne": 673724,
+   "Affected":[
+      {
+         "Version":"0.17.8",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"0.16.11",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper authorization in the Circles app 0.17.7 causes retaining access when an email address was removed from a circle.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "michag86",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Circles app is upgraded to 0.17.8."
+}
