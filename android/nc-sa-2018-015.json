@@ -19,7 +19,7 @@
       }
    ],
    "Description":"<p>A too permissive check allowed an installed application that contained the Nextcloud client package name to obtain access to the database of the Nextcloud application. At time of disclosure there are no applications with in the Google Play Store that fullfill this requirement.</p>",
-   "ActionTaken": "<p>The error has been fixed.</p>",
+   "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
          "Name": "TBD",
