@@ -1,0 +1,36 @@
+{
+   "Title": "Server-Side request forgery in New-Subscription feature of the calendar app",
+   "Timestamp": 1234567890,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.0,
+      "vector": "AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 918,
+      "name": "Server-Side Request Forgery"
+   },
+   "HackerOne": 427835,
+   "Affected":[
+      {
+         "Version":"16.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"15.0.9",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"An authenticated server-side request forgery in Nextcloud server 16.0.1 allowed to detect local and remote services when adding a new subscription in the calendar application.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Tim Coen",
+         "Website": "https://security-consulting.icu/blog/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud server is upgraded to 16.0.2."
+}
