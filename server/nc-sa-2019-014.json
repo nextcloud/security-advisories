@@ -1,6 +1,6 @@
 {
    "Title": "Server-Side request forgery in New-Subscription feature of the calendar app",
-   "Timestamp": 1234567890,
+   "Timestamp": 1562241600,
    "Risk": 1,
    "CVSS3": {
       "score": 5.0,
