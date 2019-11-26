@@ -1,0 +1,35 @@
+{
+   "Title": "Group admins can create users with IDs of system folders",
+   "Timestamp": 1565611200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 8.4,
+      "vector": "AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H"
+   },
+   "CWE": {
+      "id": 20,
+      "name": "Improper Input Validation"
+   },
+   "HackerOne": 508493,
+   "Affected":[
+      {
+         "Version":"15.0.8",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"14.0.11",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper Input Validation in Nextcloud Server 15.0.7 allows group admins to create users with IDs of system folders.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Leon Klingele",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 15.0.8."
+}
