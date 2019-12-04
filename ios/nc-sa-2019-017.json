@@ -1,0 +1,31 @@
+{
+   "Title": "Login and token disclosure to other Nextcloud services",
+   "Timestamp": 1573560000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.9,
+      "vector": "AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 657,
+      "name": "Violation of Secure Design Principles"
+   },
+   "HackerOne": 672623,
+   "Affected":[
+      {
+         "Version":"2.24.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Violation of Secure Design Principles in the iOS App 2.24.0 causes the app to leak its login and token to other Nextcloud services when search e.g. for federated users or registering for push notifications.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Jannik Großkopf",
+         "Company": "Telekom Security",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the iOS App is upgraded to 2.24.0."
+}
