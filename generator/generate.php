@@ -179,6 +179,9 @@ foreach($allBugs as $category => $advisories) {
                     case 'android':
                         $categoryText = 'Android App';
                         break;
+                    case 'ios':
+                        $categoryText = 'iOS App';
+                        break;
                     case 'desktop':
                         $categoryText = 'Desktop Client';
                         break;
@@ -198,7 +201,7 @@ foreach($allBugs as $category => $advisories) {
                         $categoryText = 'lookup-server';
                         break;
                     default:
-                        throw new Exception('Should never happen');
+                        throw new Exception('Unknown category: ' . $category);
                         break;
                 }
                 $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
