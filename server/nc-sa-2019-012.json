@@ -1,0 +1,40 @@
+{
+   "Title": "File-drop content is visible through the gallery app",
+   "Timestamp": 1571745600,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.0,
+      "vector": "AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 285,
+      "name": "Improper Authorization"
+   },
+   "HackerOne": 719426,
+   "Affected":[
+      {
+         "Version":"17.0.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"16.0.6",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"15.0.13",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper authorization in Nextcloud server 17.0.0 causes leaking of previews and files when a file-drop share link is opened via the gallery app.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Olav Seyfarth (nursoda)",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud server is upgraded to 17.0.1."
+}
