@@ -25,6 +25,7 @@ $components = [
     'server',
     'desktop',
     'android',
+    'ios',
     'calendar',
     'contacts',
     'talk',
