@@ -18,7 +18,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Not strictly enough sanitization allowed an attacker to get content information from protected tables when using custom queries.</p>",
+   "Description":"Not strictly enough sanitization allowed an attacker to get content information from protected tables when using custom queries.",
    "Acknowledgment":[
       {
          "Name": "Julien Thomas",
@@ -27,5 +27,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that users upgrade to version 3.6.1 or later.</p>"
+   "Resolution": "It is recommended that users upgrade to version 3.6.1 or later."
 }

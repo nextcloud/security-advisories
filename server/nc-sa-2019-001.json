@@ -14,17 +14,17 @@
    "Affected":[
       {
          "Version":"15.0.1",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2019-5449",
          "Operator":"<"
       },
       {
          "Version":"14.0.5",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2019-5449",
          "Operator":"<"
       },
       {
          "Version":"13.0.9",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2019-5449",
          "Operator":"<"
       }
    ],

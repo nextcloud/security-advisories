@@ -18,12 +18,12 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>If an attacker has physical access to an Android smartphone without a screen lock, but with nextcloud installed and set up, they can circumvent the passcode protection by repeatedly opening and closing the app in a very short time.</p>",
+   "Description":"If an attacker has physical access to an Android smartphone without a screen lock, but with nextcloud installed and set up, they can circumvent the passcode protection by repeatedly opening and closing the app in a very short time.",
    "Acknowledgment":[
       {
          "Name": "Mathijs van Veluw",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that users upgrade to version 3.6.1 or later.</p>"
+   "Resolution": "It is recommended that users upgrade to version 3.6.1 or later."
 }

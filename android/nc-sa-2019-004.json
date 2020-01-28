@@ -18,7 +18,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>Creating a fake multi-account and aborting the process would redirect the user to the default account of the device without asking for the lock pattern if one was set up.</p>",
+   "Description":"Creating a fake multi-account and aborting the process would redirect the user to the default account of the device without asking for the lock pattern if one was set up.",
    "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
@@ -28,5 +28,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that users upgrade to version 3.6.1.</p>"
+   "Resolution": "It is recommended that users upgrade to version 3.6.1."
 }
