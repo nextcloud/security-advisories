@@ -18,7 +18,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"<p>A too permissive check allowed an installed application that contained the Nextcloud client package name to obtain access to the database of the Nextcloud application. At time of disclosure there are no applications with in the Google Play Store that fullfill this requirement.</p>",
+   "Description":"A too permissive check allowed an installed application that contained the Nextcloud client package name to obtain access to the database of the Nextcloud application. At time of disclosure there are no applications with in the Google Play Store that fullfill this requirement.",
    "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
@@ -27,5 +27,5 @@
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
-   "Resolution": "<p>It is recommended that users upgrade to version 3.2.0.</p>"
+   "Resolution": "It is recommended that users upgrade to version 3.2.0."
 }
