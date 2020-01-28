@@ -19,9 +19,9 @@
          "Commits": [
             "gallery/6933d27afe518967bd1b60e6a7eacd88288929fc"
          ]
-      }  
+      }
    ],
-   "Description":"Due to a recent migration of the Gallery app to the new sharing endpoint a parameter changed from an integer to a string value. This value wasn't sanitized before and was thus now vulnerable to a Cross-Site-Scripting attack.To exploit this vulnerability an authenticated attacker has to share a folder with someone else, get them to open the shared folder in the Gallery app and open the sharing window there.Since Nextcloud employes a strict Content-Security-Policy this vulnerability is only exploitable in browsers not supporting Content-Security-Policy. You can check at <a href=\"http://caniuse.com/#feat=contentsecuritypolicy\">caniuse.com</a> whether your browser supports CSP.",
+   "Description":"Due to a recent migration of the Gallery app to the new sharing endpoint a parameter changed from an integer to a string value. This value wasn't sanitized before and was thus now vulnerable to a Cross-Site-Scripting attack.To exploit this vulnerability an authenticated attacker has to share a folder with someone else, get them to open the shared folder in the Gallery app and open the sharing window there. Since Nextcloud employs a strict Content-Security-Policy this vulnerability is only exploitable in browsers not supporting Content-Security-Policy. You can check at <a href=\"http://caniuse.com/#feat=contentsecuritypolicy\">caniuse.com</a> whether your browser supports CSP.",
    "ActionTaken": "The user input is now properly sanitised before provided back to the user. ",
    "Acknowledgment":[
       {
