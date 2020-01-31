@@ -1,0 +1,41 @@
+{
+   "Title": "2FA sessions not properly expired on password change",
+   "Timestamp": 1554076800,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.6,
+      "vector": "AV:P/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 384,
+      "name": "Session Fixation"
+   },
+   "HackerOne": 486693,
+   "Affected":[
+      {
+         "Version":"15.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"14.0.7",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"13.0.11",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A bug in Nextcloud Server 15.0.2 causes pending 2FA logins to not be correctly expired when the password of the user is reset.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Jackson K V",
+         "Mail": "jacksonkv67@gmail.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 15.0.3."
+}
