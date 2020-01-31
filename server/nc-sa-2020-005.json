@@ -1,0 +1,32 @@
+{
+   "Title": "Missing default timeout on HTTP requests",
+   "Timestamp": 1567555200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 4.3,
+      "vector": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+   },
+   "CWE": {
+      "id": 1088,
+      "name": "Synchronous Access of Remote Resource without Timeout"
+   },
+   "HackerOne": 592864,
+   "Affected":[
+      {
+         "Version":"17.0.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Dangling remote share attempts in Nextcloud 16 allow a DNS pollution when running long.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Joshua Maddux",
+         "Mail": "jdmaddux@gmail.com",
+         "Website": "https://twitter.com/joshmdx",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 17.0.0."
+}
