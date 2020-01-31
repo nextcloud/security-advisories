@@ -1,0 +1,43 @@
+{
+   "Title": "Improper permission preservation on reshares",
+   "Timestamp": 1561593600,
+   "Risk": 2,
+   "CVSS3": {
+      "score": 6.4,
+      "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:H"
+   },
+   "CWE": {
+      "id": 281,
+      "name": "Improper Preservation of Permissions"
+   },
+   "HackerOne": 619484,
+   "Affected":[
+      {
+         "Version":"16.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"15.0.9",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"14.0.13",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper permissions preservation in Nextcloud Server 16.0.1 causes sharees to be able to reshare with write permissions when sharing the mount point of a share they received, as a public link.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Phil Davis",
+         "Mail": "phil@jankaritech.com",
+         "Company": "JankariTech Pvt Ltd",
+         "Website": "https://jankaritech.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 16.0.2."
+}
