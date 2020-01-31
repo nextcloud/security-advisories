@@ -1,0 +1,40 @@
+{
+   "Title": "Event details leaked when sharing a non-public calendar event",
+   "Timestamp": 1542240000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 4.8,
+      "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+   },
+   "CWE": {
+      "id": 281,
+      "name": "Improper Preservation of Permissions"
+   },
+   "HackerOne": 439828,
+   "Affected":[
+      {
+         "Version":"14.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"13.0.8",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"12.0.13",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper preservation of permissions in Nextcloud Server 14.0.3 causes the event details to be leaked when sharing a non-public event.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "NA",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 14.0.4."
+}
