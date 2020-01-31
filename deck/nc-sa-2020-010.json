@@ -1,0 +1,31 @@
+{
+   "Title": "Improper neutralization of item names in projects feature",
+   "Timestamp": 1564358400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 2.0,
+      "vector": "AV:N/AC:H/PR:H/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Improper Neutralization of Input During Web Page Generation"
+   },
+   "HackerOne": 662204,
+   "Affected":[
+      {
+         "Version":"0.6.6",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper neutralization of file names, conversation names and board names in Nextcloud Server 16.0.3, Nextcloud Talk 6.0.3 and Nextcloud Deck 0.6.5 causes an XSS when linking them with each others in a project.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Tim Coen",
+         "Website": "https://security-consulting.icu/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Deck is upgraded to 0.6.6."
+}
