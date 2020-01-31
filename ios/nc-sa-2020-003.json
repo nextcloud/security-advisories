@@ -1,0 +1,36 @@
+{
+   "Title": "Missing sanitization in iOS App allows XSS",
+   "Timestamp": 1574208000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 3.5,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 116,
+      "name": "Improper Encoding or Escaping of Output"
+   },
+   "HackerOne": 575562,
+   "Affected":[
+      {
+         "Version":"2.25.0",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Missing sanitization in the iOS App 2.24.4 causes an XSS when opening malicious HTML files.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "noobsec",
+         "Mail": "root@noobsec.org",
+         "Website": "https://noobsec.org",
+         "Reason": "Vulnerability discovery and disclosure."
+      },
+      {
+         "Name": "Wannarat C. / MisterHuntz",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the iOS App is upgraded to 2.25.0."
+}
