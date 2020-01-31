@@ -1,0 +1,32 @@
+{
+   "Title": "Bypass lock protection in Android app",
+   "Timestamp": 1575504000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.9,
+      "vector": "AV:P/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 288,
+      "name": "Authentication Bypass Using an Alternate Path or Channel"
+   },
+   "HackerOne": 747726,
+   "Affected":[
+      {
+         "Version":"3.9.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A wrong check for the system time in the Android App 3.9.0 causes a bypass of the lock protection when changing the time of the system to the past.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Arvind",
+         "Mail": "ar-arvind@protonmail.com",
+         "Website": "https://www.facebook.com/1808arvind",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Android App is upgraded to 3.9.1."
+}
