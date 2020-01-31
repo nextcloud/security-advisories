@@ -1,0 +1,40 @@
+{
+   "Title": "Workflow rules only check the file extension for the mimetype instead of the content",
+   "Timestamp": 1575417600,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.5,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 646,
+      "name": "Reliance on File Name or Extension of Externally-Supplied File"
+   },
+   "HackerOne": 697959,
+   "Affected":[
+      {
+         "Version":"17.0.2",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"16.0.7",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"15.0.14",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A bug in Nextcloud Server 17.0.1 causes the workflow rules to depend their behaviour on the file extension when checking file mimetypes.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Ralf Thesing",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 17.0.2."
+}
