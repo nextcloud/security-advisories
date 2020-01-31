@@ -1,0 +1,38 @@
+{
+   "Title": "Reflected XSS in redirect of the Updater",
+   "Timestamp": 1553558400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 2.0,
+      "vector": "AV:N/AC:H/PR:H/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+   },
+   "HackerOne": 515484,
+   "Affected":[
+      {
+         "Version":"15.0.6",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"14.0.9",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Missing escaping of HTML in the Updater of Nextcloud 15.0.5 allowed a reflected XSS when starting the updater from a malicious location.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Nikita Tikhomirov",
+         "Mail": "nstikhomirov@gmail.com",
+         "Company": "Pentest Generation",
+         "Website": "https://nstikhomirov.me/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 15.0.6."
+}
