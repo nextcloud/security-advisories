@@ -27,6 +27,7 @@ $components = [
     'android',
     'ios',
     'calendar',
+    'circles',
     'contacts',
     'talk',
     'lookup-server',
@@ -194,11 +195,14 @@ foreach($allBugs as $category => $advisories) {
                     case 'calendar':
                         $categoryText = 'Calendar App';
                         break;
+                    case 'circles':
+                        $categoryText = 'Circles App';
+                        break;
                     case 'talk':
                         $categoryText = 'Talk App';
                         break;
                     case 'lookup-server':
-                        $categoryText = 'lookup-server';
+                        $categoryText = 'Lookup server';
                         break;
                     default:
                         throw new Exception('Unknown category: ' . $category);
