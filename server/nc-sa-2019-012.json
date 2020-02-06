@@ -14,17 +14,17 @@
    "Affected":[
       {
          "Version":"17.0.1",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8119",
          "Operator":"<"
       },
       {
          "Version":"16.0.6",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8119",
          "Operator":"<"
       },
       {
          "Version":"15.0.13",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8119",
          "Operator":"<"
       }
    ],

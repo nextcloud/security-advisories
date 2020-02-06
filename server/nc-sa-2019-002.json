@@ -14,22 +14,22 @@
    "Affected":[
       {
          "Version":"15.0.0",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8122",
          "Operator":"<"
       },
       {
          "Version":"14.0.4",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8122",
          "Operator":"<"
       },
       {
          "Version":"13.0.8",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8122",
          "Operator":"<"
       },
       {
          "Version":"12.0.13",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8122",
          "Operator":"<"
       }
    ],

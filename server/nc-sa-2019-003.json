@@ -14,17 +14,17 @@
    "Affected":[
       {
          "Version":"15.0.0",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8121",
          "Operator":"<"
       },
       {
          "Version":"14.0.5",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8121",
          "Operator":"<"
       },
       {
          "Version":"13.0.9",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8121",
          "Operator":"<"
       }
    ],
@@ -33,7 +33,7 @@
    "Acknowledgment":[
       {
          "Name": "Fabian Riechsteiner",
-	 "Company": "recretix systems AG",
+         "Company": "recretix systems AG",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
