@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"0.6.6",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2019-15619",
          "Operator":"<"
       }
    ],

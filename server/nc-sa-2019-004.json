@@ -14,17 +14,17 @@
    "Affected":[
       {
          "Version":"16.0.2",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8120",
          "Operator":"<"
       },
       {
          "Version":"15.0.9",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8120",
          "Operator":"<"
       },
       {
          "Version":"14.0.13",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8120",
          "Operator":"<"
       }
    ],
@@ -33,7 +33,7 @@
    "Acknowledgment":[
       {
          "Name": "Frederik Braun",
-	 "Website": "https://frederik-braun.com",
+         "Website": "https://frederik-braun.com",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
