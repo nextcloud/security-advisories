@@ -35,6 +35,15 @@ $components = [
 ];
 $allBugs = [];
 
+$dir = new DirectoryIterator(__DIR__ . '/out');
+foreach ($dir as $fileinfo) {
+    if ($fileinfo->isDot() || $fileinfo->getFilename() === '.gitkeep') {
+        continue;
+    }
+
+    unlink($fileinfo->getRealPath());
+}
+
 foreach($components as $component) {
     echo "… Iterating $component …\n";
     $componentBugs = [];
@@ -148,6 +157,9 @@ foreach($components as $component) {
             }
             $content = str_replace('~~ACKNOWLEDGMENTS~~', $acknowledgments, $content);
 
+            if (file_exists('./out/' . substr($fileinfo, 0, -5) . '.php')) {
+                throw new Exception('Duplicate identifier: ' . substr($fileinfo, 0, -5));
+            }
             file_put_contents('./out/' . substr($fileinfo, 0, -5) . '.php', $content);
 
             echo "Finished $fileinfo\n";
