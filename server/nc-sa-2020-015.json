@@ -1,0 +1,40 @@
+{
+   "Title": "Secure view shares can be downloaded by manipulating the URL",
+   "Timestamp": 1581033600,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 0.0,
+      "vector": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:N"
+   },
+   "CWE": {
+      "id": 284,
+      "name": "Improper Access Control - Generic"
+   },
+   "HackerOne": 788257,
+   "Affected":[
+      {
+         "Version":"18.0.1",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"17.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"16.0.10",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A missing access control check in Nextcloud Server 18.0.0 causes hide-download shares to be downloadable when appending /download to the URL.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "NA",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 18.0.1."
+}
