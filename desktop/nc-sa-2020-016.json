@@ -1,0 +1,31 @@
+{
+   "Title": "Code injection in Nextcloud Desktop Client for macOS",
+   "Timestamp": 1581897600,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 3.8,
+      "vector": "AV:L/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 94,
+      "name": "Improper Control of Generation of Code (Code Injection)"
+   },
+   "HackerOne": 633266,
+   "Affected":[
+      {
+         "Version":"2.6.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A code injection in Nextcloud Desktop Client 2.6.2 for macOS allowed to load arbitrary code when starting the client with DYLD_INSERT_LIBRARIES set in the enviroment.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Wojciech Reguła",
+         "Website": "https://wojciechregula.blog/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Desktop Client is upgraded to 2.6.3."
+}
