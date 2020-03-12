@@ -30,6 +30,7 @@ $components = [
     'circles',
     'contacts',
     'deck',
+    'groupfolders',
     'talk',
     'lookup-server',
 ];
@@ -213,6 +214,9 @@ foreach($allBugs as $category => $advisories) {
                         break;
                     case 'deck':
                         $categoryText = 'Deck App';
+                        break;
+                    case 'groupfolders':
+                        $categoryText = 'Groupfolders App';
                         break;
                     case 'talk':
                         $categoryText = 'Talk App';
