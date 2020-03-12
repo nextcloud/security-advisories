@@ -1,0 +1,33 @@
+{
+   "Title": "Renaming an item to a protected hidden folder deletes the target",
+   "Timestamp": 1563192000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 6.8,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:N/A:H"
+   },
+   "CWE": {
+      "id": 284,
+      "name": "Improper Access Control - Generic"
+   },
+   "HackerOne": 642515,
+   "Affected":[
+      {
+         "Version":"4.0.4",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper access control in Groupfolders app 4.0.3 allowed to delete hidden directories when when renaming an accessible item to the same name.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "[REPORT NAME]",
+         "Mail": "[REPORT MAIL]",
+         "Company": "[REPORT COMPANY]",
+         "Website": "[REPORT WEBSITE]",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Groupfolders app is upgraded to 4.0.4."
+}
