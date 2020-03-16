@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"2.6.3",
-         "CVE":"CVE assignment pending",
+         "CVE":"CVE-2020-8140",
          "Operator":"<"
       }
    ],
