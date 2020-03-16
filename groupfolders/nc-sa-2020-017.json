@@ -22,10 +22,7 @@
    "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
-         "Name": "[REPORT NAME]",
-         "Mail": "[REPORT MAIL]",
-         "Company": "[REPORT COMPANY]",
-         "Website": "[REPORT WEBSITE]",
+         "Name": "Francesco MORO(sinotto)",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
