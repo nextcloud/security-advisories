@@ -1,0 +1,35 @@
+{
+   "Title": "Missing ownership check on remote wipe endpoint",
+   "Timestamp": 1584532800,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 7.7,
+      "vector": "AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H"
+   },
+   "CWE": {
+      "id": 639,
+      "name": "Insecure Direct Object Reference"
+   },
+   "HackerOne": 819807,
+   "Affected":[
+      {
+         "Version":"18.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"17.0.5",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"An Insecure direct object reference vulnerability in Nextcloud Server 18.0.2 allowed an attacker to remote wipe devices of other users when sending a malicious request directly to the endpoint.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Tommy Suriel",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 18.0.3."
+}
