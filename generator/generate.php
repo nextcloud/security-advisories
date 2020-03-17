@@ -228,7 +228,7 @@ foreach($allBugs as $category => $advisories) {
                         throw new Exception('Unknown category: ' . $category);
                         break;
                 }
-                $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
+                $identifier = str_replace('nc-sa', 'NC-SA', substr($identifier, 0));
                 $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://nextcloud.com/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
                 $originalTitle = $title;
                 $title = htmlentities($categoryText . ': ' . $title . ' (' . ucfirst($identifier) . ')');
