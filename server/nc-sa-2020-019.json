@@ -1,0 +1,32 @@
+{
+   "Title": "XSS in Files PDF viewer",
+   "Timestamp": 1584532800,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 3.5,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Cross-site Scripting (XSS) - Generic"
+   },
+   "HackerOne": 819863,
+   "Affected":[
+      {
+         "Version":"18.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"An outdated 3rd party library in the Files PDF viewer for Nextcloud Server 18.0.2 caused a Cross-site scripting vulnerability when opening a malicious PDF.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Tripp Lyons",
+         "Mail": "tripplyons@gmail.com",
+         "Website": "https://tripplyons.com/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 18.0.3."
+}
