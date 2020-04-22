@@ -1,0 +1,40 @@
+{
+   "Title": "Code injection possible with malformed Nextcloud Talk chat commands",
+   "Timestamp": 1587384000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 8.0,
+      "vector": "AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H"
+   },
+   "CWE": {
+      "id": 94,
+      "name": "Code Injection"
+   },
+   "HackerOne": 851807,
+   "Affected":[
+      {
+         "Version":"8.0.8",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"7.0.3",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      },
+      {
+         "Version":"6.0.5",
+         "CVE":"CVE assignment pending",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A too lax check in Nextcloud Talk 6.0.4, 7.0.2 and 8.0.7 allowed a code injection when a not correctly sanitized talk command was added by an administrator.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Spectre",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Talk is upgraded to 8.0.8."
+}
