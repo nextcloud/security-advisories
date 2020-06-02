@@ -1,0 +1,32 @@
+{
+   "Title": "Improper access control allows injecting tasks into other users decks",
+   "Timestamp": 1589544000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 4.1,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:L/A:N",
+   },
+   "CWE": {
+      "id": 284,
+      "name": "Improper Access Control - Generic"
+   },
+   "HackerOne": 867052,
+   "Affected":[
+      {
+         "Version":"1.0.1",
+         "CVE":"CVE-2019-15619",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper access control in Nextcloud Deck 1.0.0 allowed an attacker to inject tasks into other users decks.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Remco Sprooten",
+         "Company": "Sector52",
+         "Mail": "remco@sector52.nl",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Deck is upgraded to 1.0.1."
+}
