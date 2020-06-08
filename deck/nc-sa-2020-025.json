@@ -1,0 +1,32 @@
+{
+   "Title": "Missing permission check on resharing a board",
+   "Timestamp": 1586347200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 7.3,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:H"
+   },
+   "CWE": {
+      "id": 284,
+      "name": "Improper Access Control - Generic"
+   },
+   "HackerOne": 827816,
+   "Affected":[
+      {
+         "Version":"0.8.1",
+         "CVE":"CVE-2020-8182",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Improper access control in Nextcloud Deck 0.8.0 allowed an attacker to reshare boards shared with them with more permissions than they had themselves.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Silvia Väli",
+         "Mail": "silvia@clarifiedsecurity.com",
+         "Website": "https://www.clarifiedsecurity.com/silvia-vali/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Deck is upgraded to 0.8.1."
+}
