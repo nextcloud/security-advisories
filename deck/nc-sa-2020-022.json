@@ -14,7 +14,7 @@
    "Affected":[
       {
          "Version":"1.0.1",
-         "CVE":"CVE-2019-15619",
+         "CVE":"CVE-2020-8179",
          "Operator":"<"
       }
    ],
