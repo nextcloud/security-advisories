@@ -1,0 +1,30 @@
+{
+   "Title": "Limit contacts photo uploading to images",
+   "Timestamp": 1587038400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 2.6,
+      "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+      "id": 840,
+      "name": "Business Logic Errors"
+   },
+   "HackerOne": 808287,
+   "Affected":[
+      {
+         "Version":"3.3.0",
+         "CVE":"CVE-2020-8181",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A missing file type check in Nextcloud Contacts 3.2.0 allowed a malicious user to upload any file as avatars.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Tommy Suriel",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Contacts is upgraded to 3.3.0."
+}
