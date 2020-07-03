@@ -22,18 +22,19 @@
 
 date_default_timezone_set('Europe/Zurich');
 $components = [
-    'server',
-    'desktop',
-    'android',
-    'ios',
-    'calendar',
-    'circles',
-    'contacts',
-    'deck',
-    'groupfolders',
-    'mail',
-    'talk',
-    'lookup-server',
+    'server' => 'Server',
+    'desktop' => 'Desktop Client',
+    'android' => 'Android App',
+    'ios' => 'iOS App',
+    'calendar' => 'Calendar App',
+    'circles' => 'Circles App',
+    'contacts' => 'Contacts App',
+    'deck' => 'Deck App',
+    'groupfolders' => 'Groupfolders App',
+    'mail' => 'Mail App',
+    'talk' => 'Talk App',
+    'preferred_providers' => 'Preferred providers',
+    'lookup-server' => 'Lookup server',
 ];
 $allBugs = [];
 
@@ -46,7 +47,7 @@ foreach ($dir as $fileinfo) {
     unlink($fileinfo->getRealPath());
 }
 
-foreach($components as $component) {
+foreach($components as $component => $componentName) {
     echo "… Iterating $component …\n";
     $componentBugs = [];
 
@@ -191,47 +192,10 @@ foreach($allBugs as $category => $advisories) {
             if (!isset($identifiersDone[$identifier])) {
                 $identifiersDone[$identifier] = 'true';
                 $advisoryContent = json_decode(file_get_contents(__DIR__ . '/../' . strtolower($category) . '/' . $identifier . '.json'), true);
-                switch (strtolower($category)) {
-                    case 'android':
-                        $categoryText = 'Android App';
-                        break;
-                    case 'ios':
-                        $categoryText = 'iOS App';
-                        break;
-                    case 'desktop':
-                        $categoryText = 'Desktop Client';
-                        break;
-                    case 'server':
-                        $categoryText = 'Server';
-                        break;
-                    case 'contacts':
-                        $categoryText = 'Contacts App';
-                        break;
-                    case 'calendar':
-                        $categoryText = 'Calendar App';
-                        break;
-                    case 'circles':
-                        $categoryText = 'Circles App';
-                        break;
-                    case 'deck':
-                        $categoryText = 'Deck App';
-                        break;
-                    case 'groupfolders':
-                        $categoryText = 'Groupfolders App';
-                        break;
-                    case 'mail':
-                        $categoryText = 'Mail App';
-                        break;
-                    case 'talk':
-                        $categoryText = 'Talk App';
-                        break;
-                    case 'lookup-server':
-                        $categoryText = 'Lookup server';
-                        break;
-                    default:
-                        throw new Exception('Unknown category: ' . $category);
-                        break;
+                if (!isset($components[strtolower($category)])) {
+                    throw new Exception('Unknown category: ' . $category);
                 }
+                $categoryText = $components[strtolower($category)];
                 $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
                 $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://nextcloud.com/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
                 $originalTitle = $title;
