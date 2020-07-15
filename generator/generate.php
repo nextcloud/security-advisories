@@ -20,20 +20,21 @@
  *
  */
 
-date_default_timezone_set('Europe/Zurich');
+date_default_timezone_set('Europe/Berlin');
 $components = [
-    'server',
-    'desktop',
-    'android',
-    'ios',
-    'calendar',
-    'circles',
-    'contacts',
-    'deck',
-    'groupfolders',
-    'mail',
-    'talk',
-    'lookup-server',
+    'server' => 'Server',
+    'desktop' => 'Desktop Client',
+    'android' => 'Android App',
+    'ios' => 'iOS App',
+    'calendar' => 'Calendar App',
+    'circles' => 'Circles App',
+    'contacts' => 'Contacts App',
+    'deck' => 'Deck App',
+    'groupfolders' => 'Groupfolders App',
+    'mail' => 'Mail App',
+    'talk' => 'Talk App',
+    'preferred_providers' => 'Preferred providers',
+    'lookup-server' => 'Lookup server',
 ];
 $allBugs = [];
 
@@ -46,7 +47,7 @@ foreach ($dir as $fileinfo) {
     unlink($fileinfo->getRealPath());
 }
 
-foreach($components as $component) {
+foreach($components as $component => $componentName) {
     echo "… Iterating $component …\n";
     $componentBugs = [];
 
@@ -58,10 +59,11 @@ foreach($components as $component) {
             $content = file_get_contents('./template.php');
             $advisory = json_decode(file_get_contents($fileinfo->getRealPath()), true);
 
-
-            $content = str_replace('~~TITLE~~', $advisory['Title'], $content);
-            $content = str_replace('~~IDENTIFIER~~',  str_replace('nc-sa', 'NC-SA', substr($fileinfo, 0, -5)), $content);
-            $content = str_replace('~~DATE~~', date('jS F o', $advisory['Timestamp']), $content);
+            $content = str_replace(
+                ['~~TITLE~~', '~~IDENTIFIER~~', '~~DATE~~'],
+                [$advisory['Title'], str_replace('nc-sa', 'NC-SA', substr($fileinfo, 0, -5)), date('jS F o', $advisory['Timestamp'])],
+                $content
+            );
 
             $risk = $advisory['Risk'];
             switch ($risk) {
@@ -80,7 +82,7 @@ foreach($components as $component) {
 
             $cwe = '';
             if(isset($advisory['CWE'])) {
-                $cwe = '<p>CWE: <a href="https://cwe.mitre.org/data/definitions/'.$advisory['CWE']['id'].'.html">'.$advisory['CWE']['name'] . ' (CWE-'.$advisory['CWE']['id'].')</a></p>';
+                $cwe = sprintf("<p>CWE: <a href=\"https://cwe.mitre.org/data/definitions/%s.html\">%s (CWE-%s)</a></p>", $advisory['CWE']['id'], $advisory['CWE']['name'], $advisory['CWE']['id']);
 
             }
             $content = str_replace('~~CWE~~', $cwe, $content);
@@ -99,23 +101,22 @@ foreach($components as $component) {
             if(isset($advisory['CVSS3'])) {
                 $cvss = '<p>CVSS v3 Base Score: '.$advisory['CVSS3']['score'].' (<a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/'.$advisory['CVSS3']['vector'].'">'.$advisory['CVSS3']['vector'].'</a>)</p>';
             }
-            $content = str_replace('~~CVSS~~', $cvss, $content);
-
-            $content = str_replace('~~DESCRIPTION~~', $advisory['Description'], $content);
+            $content = str_replace(
+                ['~~CVSS~~', '~~DESCRIPTION~~'],
+                [$cvss, $advisory['Description']],
+                $content
+            );
 
             $affectedVersions = '';
             foreach($advisory['Affected'] as $affected) {
-                $operator = isset($affected['Operator']) ? $affected['Operator'].' ' : '';
-                $affectedVersions .= "<li>Nextcloud ". ucfirst($component). " " . htmlentities($operator)."<strong>".$affected["Version"]."</strong> (".$affected["CVE"].")</li>\n";
+                $operator = isset($affected['Operator']) ? $affected['Operator'] . ' ' : '';
+                $affectedVersions .= sprintf("<li>Nextcloud %s %s<strong>%s</strong> (%s)</li>\n", ucfirst($component), htmlentities($operator), $affected['Version'], $affected['CVE']);
                 if(isset($affected['Commits'])) {
                     $affectedVersions .= "<ul>\n";
                     $commitsToList = count($affected['Commits']);
                     foreach($affected['Commits'] as $commit) {
-
-                        $repository = explode('/', $commit)[0];
-                        $commit = explode('/', $commit)[1];
-
-                        $affectedVersions .= "<li><a href=\"https://github.com/nextcloud/".$repository."/commit/".$commit."\">".$repository."/".$commit."</a></li>\n";
+                        [$repository, $commit] = explode('/', $commit);
+                        $affectedVersions .= sprintf("<li><a href=\"https://github.com/nextcloud/%s/commit/%s\">%s/%s</a></li>\n", $repository, $commit, $repository, $commit);
                     }
                     $affectedVersions .= "</ul>\n";
                 }
@@ -123,35 +124,34 @@ foreach($components as $component) {
             }
             $content = str_replace('~~AFFECTEDVERSIONS~~', $affectedVersions, $content);
 
-            if(isset($advisory['ActionTaken'])) {
-                $actionTaken = $advisory['ActionTaken'];
-            }
-            if(isset($advisory['Resolution'])) {
-                $resolution = $advisory['Resolution'];
-            }
-            $content = str_replace('~~ACTION~~', $actionTaken, $content);
-            $content = str_replace('~~RESOLUTION~~', $resolution, $content);
+            $actionTaken = $advisory['ActionTaken'] ?? '';
+            $resolution = $advisory['Resolution'] ?? '';
+            $content = str_replace(
+                ['~~ACTION~~', '~~RESOLUTION~~'],
+                [$actionTaken, $resolution],
+                $content
+            );
 
             $acknowledgments = '';
-            if(isset($advisory['Acknowledgment'])) {
-                foreach($advisory['Acknowledgment'] as $acknowledgment) {
-                    $company = isset($acknowledgment['Company']) ? $acknowledgment['Company'] : '';
-                    $mail = isset($acknowledgment['Mail']) ? $acknowledgment['Mail'] : '';
-                    $reason = isset($acknowledgment['Reason']) ? $acknowledgment['Reason']: '';
-                    $website = isset($acknowledgment['Website']) ? $acknowledgment['Website']: '';
+            if (isset($advisory['Acknowledgment'])) {
+                foreach ($advisory['Acknowledgment'] as $acknowledgment) {
+                    $company = $acknowledgment['Company'] ?? '';
+                    $mail = $acknowledgment['Mail'] ?? '';
+                    $reason = $acknowledgment['Reason'] ?? '';
+                    $website = $acknowledgment['Website'] ?? '';
                     $acknowledgments .= '<li>';
-                    if($website) {
+                    if ($website) {
                         $acknowledgments .= '<a href="'.$website.'" target="_blank" rel="noreferrer">';
                     }
                     $acknowledgments .= $acknowledgment['Name'];
-                    if($company !== '') {
+                    if ($company !== '') {
                         $acknowledgments .= ' - '.$company;
                     }
-                    if($mail !== '') {
+                    if ($mail !== '') {
                         $acknowledgments .= ' ('.$mail.')';
                     }
                     $acknowledgments .= ' - '.$reason;
-                    if($website) {
+                    if ($website) {
                         $acknowledgments .= '</a>';
                     }
                     $acknowledgments .= '</li>';
@@ -178,6 +178,7 @@ foreach($components as $component) {
 // Create RSS feed & overview page
 $identifiersDone = [];
 $rssEntries = [];
+$listEntries = [];
 $rss = '<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
@@ -185,53 +186,16 @@ $rss = '<?xml version="1.0" encoding="UTF-8" ?>
  <link>https://nextcloud.com/security/advisories/</link>
  <description>The Nextcloud security advisories as a RSS feed</description>
  <ttl>1800</ttl>';
-foreach($allBugs as $category => $advisories) {
-    foreach($advisories as $advisories) {
+foreach ($allBugs as $category => $list) {
+    foreach  ($list as $advisories) {
         foreach ($advisories as $identifier => $title) {
             if (!isset($identifiersDone[$identifier])) {
                 $identifiersDone[$identifier] = 'true';
                 $advisoryContent = json_decode(file_get_contents(__DIR__ . '/../' . strtolower($category) . '/' . $identifier . '.json'), true);
-                switch (strtolower($category)) {
-                    case 'android':
-                        $categoryText = 'Android App';
-                        break;
-                    case 'ios':
-                        $categoryText = 'iOS App';
-                        break;
-                    case 'desktop':
-                        $categoryText = 'Desktop Client';
-                        break;
-                    case 'server':
-                        $categoryText = 'Server';
-                        break;
-                    case 'contacts':
-                        $categoryText = 'Contacts App';
-                        break;
-                    case 'calendar':
-                        $categoryText = 'Calendar App';
-                        break;
-                    case 'circles':
-                        $categoryText = 'Circles App';
-                        break;
-                    case 'deck':
-                        $categoryText = 'Deck App';
-                        break;
-                    case 'groupfolders':
-                        $categoryText = 'Groupfolders App';
-                        break;
-                    case 'mail':
-                        $categoryText = 'Mail App';
-                        break;
-                    case 'talk':
-                        $categoryText = 'Talk App';
-                        break;
-                    case 'lookup-server':
-                        $categoryText = 'Lookup server';
-                        break;
-                    default:
-                        throw new Exception('Unknown category: ' . $category);
-                        break;
+                if (!isset($components[strtolower($category)])) {
+                    throw new Exception('Unknown category: ' . $category);
                 }
+                $categoryText = $components[strtolower($category)];
                 $identifier = str_replace('c-sa', 'C-SA', substr($identifier, 0));
                 $description = htmlentities($advisoryContent['Description'] . '<br/><hr/><p><strong><a href="https://nextcloud.com/security/advisory/?id=' . $identifier . '">For more information please consult the official advisory.</a></strong></p>');
                 $originalTitle = $title;
@@ -288,13 +252,13 @@ echo "Created RSS feed\n";
 
 $fullList = '';
 
-foreach ($listEntries as $year => $datelist) {
+foreach ($listEntries as $year => $dateList) {
 
     $fullList .= "<hr>\n\n";
     $fullList .= "<h2>$year</h2>\n\n";
 
-    krsort($datelist); // sort descending by date
-    foreach ($datelist as $key => $sublist) {
+    krsort($dateList); // sort descending by date
+    foreach ($dateList as $key => $sublist) {
         foreach ($sublist as $title => $entries) {
             $fullList .= "<h3>$title</h3>\n<ul>\n\t";
             $fullList .= implode("\n\t", $entries);
