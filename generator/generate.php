@@ -124,7 +124,7 @@ foreach($components as $component => $componentName) {
             }
             $content = str_replace('~~AFFECTEDVERSIONS~~', $affectedVersions, $content);
 
-            $actionTaken = $advisory['ActionTaken'] ?? '';
+            $actionTaken = $advisory['ActionTaken'] ?? 'The error has been fixed.';
             $resolution = $advisory['Resolution'] ?? '';
             $content = str_replace(
                 ['~~ACTION~~', '~~RESOLUTION~~'],
