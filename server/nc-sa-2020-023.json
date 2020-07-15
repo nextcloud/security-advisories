@@ -1,0 +1,40 @@
+{
+   "Title": "Increase random used for encryption",
+   "Timestamp": 1591272000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 2.2,
+      "vector": "AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N"
+   },
+   "CWE": {
+      "id": 310,
+      "name": "Cryptographic Issues - Generic"
+   },
+   "HackerOne": 852841,
+   "Affected":[
+      {
+         "Version":"19.0.0",
+         "CVE":"CVE-2020-8173",
+         "Operator":"<"
+      },
+      {
+         "Version":"18.0.5",
+         "CVE":"CVE-2020-8173",
+         "Operator":"<"
+      },
+      {
+         "Version":"17.0.7",
+         "CVE":"CVE-2020-8173",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A too small set of random characters being used for encryption in Nextcloud Server 18.0.4 allowed decryption in shorter time than intended.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Lynn Stephenson",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 19.0.0."
+}
