@@ -1,0 +1,41 @@
+{
+   "Title": "Re-Sharing allows increase of privileges",
+   "Timestamp": 1594900800,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.5,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 269,
+      "name": "Improper Privilege Management"
+   },
+   "HackerOne": 889243,
+   "Affected":[
+      {
+         "Version":"19.0.1",
+         "CVE":"CVE-2020-8223",
+         "Operator":"<"
+      },
+      {
+         "Version":"18.0.7",
+         "CVE":"CVE-2020-8223",
+         "Operator":"<"
+      },
+      {
+         "Version":"17.0.8",
+         "CVE":"CVE-2020-8223",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A logic error in Nextcloud Server 19.0.0 caused a privilege escalation allowing malicious users to reshare with higher permissions than they got assigned themselves.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Dr. Alexander Fleischer",
+         "Company": "TU Ilmenau",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 19.0.1."
+}
