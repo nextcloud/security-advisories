@@ -1,0 +1,30 @@
+{
+   "Title": "XSS in desktop client via invalid server address on login form",
+   "Timestamp": 1594382400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 4.7,
+      "vector": "AV:P/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Cross-site Scripting (XSS) - Generic"
+   },
+   "HackerOne": 685552,
+   "Affected":[
+      {
+         "Version":"2.6.5",
+         "CVE":"CVE-2020-8189",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A cross-site scripting error in Nextcloud Desktop client 2.6.4 allowed to present any html (including local links) when responding with invalid data on the login attempt.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Juan Pablo Lopez Yacubian",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Desktop client is upgraded to 2.6.5."
+}
