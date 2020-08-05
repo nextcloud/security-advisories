@@ -1,0 +1,30 @@
+{
+   "Title": "Linux client is vulnerable to directory traversal when downloading files",
+   "Timestamp": 1594382400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.1,
+      "vector": "AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 22,
+      "name": "Path Traversal"
+   },
+   "HackerOne": 590319,
+   "Affected":[
+      {
+         "Version":"2.6.5",
+         "CVE":"CVE-2020-8227",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Missing sanitization of a server response in Nextcloud Desktop Client 2.6.4 for Linux allowed a malicious Nextcloud Server to store files outside of the dedicated sync directory.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Carl Pearson",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Desktop Client is upgraded to 2.6.5."
+}
