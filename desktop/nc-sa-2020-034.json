@@ -1,0 +1,32 @@
+{
+   "Title": "Memory Leak in OCUtil.dll library in Desktop client can lead to DoS",
+   "Timestamp": 1594382400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.9,
+      "vector": "AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:H"
+   },
+   "CWE": {
+      "id": 400,
+      "name": "Denial of Service"
+   },
+   "HackerOne": 588562,
+   "Affected":[
+      {
+         "Version":"2.6.5",
+         "CVE":"CVE-2020-8229",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A memory leak in the OCUtil.dll library used by Nextcloud Desktop Client 2.6.4 can lead to a DoS against the host system.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Cosmin Craciun",
+         "Mail": "cwaverst@gmail.com",
+         "Company": "Finastra",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Desktop Client is upgraded to 2.6.5."
+}
