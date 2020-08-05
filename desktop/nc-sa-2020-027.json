@@ -1,6 +1,6 @@
 {
    "Title": "XSS in desktop client via invalid server address on login form",
-   "Timestamp": 1591704000,
+   "Timestamp": 1594382400,
    "Risk": 1,
    "CVSS3": {
       "score": 4.7,
