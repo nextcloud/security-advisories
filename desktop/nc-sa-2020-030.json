@@ -1,0 +1,31 @@
+{
+   "Title": "Arbitrary code execution in desktop client via OpenSSL config",
+   "Timestamp": 1594382400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 4.8,
+      "vector": "AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 94,
+      "name": "Improper Control of Generation of Code (Code Injection)"
+   },
+   "HackerOne": 622170,
+   "Affected":[
+      {
+         "Version":"2.6.5",
+         "CVE":"CVE-2020-8224",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A code injection in Nextcloud Desktop Client 2.6.4 allowed to load arbitrary code when placing a malicious OpenSSL config into a fixed directory.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Nick Marcoccio",
+         "Website": "https://twitter.com/1oopho1e",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Desktop Client is upgraded to 2.6.5."
+}
