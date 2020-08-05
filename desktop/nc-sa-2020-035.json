@@ -1,0 +1,31 @@
+{
+   "Title": "Missing memory corruption protection on Windows release built",
+   "Timestamp": 1594382400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 4.7,
+      "vector": "AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+   },
+   "CWE": {
+      "id": 119,
+      "name": "Memory Corruption - Generic"
+   },
+   "HackerOne": 380102,
+   "Affected":[
+      {
+         "Version":"2.6.5",
+         "CVE":"CVE-2020-8230",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Missing ASLR and DEP protections in Nextcloud Desktop Client 2.6.4 for windows allowed to corrupt memory.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "René Freingruber",
+         "Website": "https://www.sec-consult.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Desktop Client is upgraded to 2.6.3."
+}
