@@ -1,0 +1,30 @@
+{
+   "Title": "Access control missing while viewing the attachments in the 'All boards'",
+   "Timestamp": 1594814400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 6.5,
+      "vector": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+   },
+   "CWE": {
+      "id": 639,
+      "name": "Insecure Direct Object Reference (IDOR)"
+   },
+   "HackerOne": 916704,
+   "Affected":[
+      {
+         "Version":"1.0.5",
+         "CVE":"CVE-2020-8235",
+         "Operator":"<"
+      }
+   ],
+    "Description":"Missing access control in Nextcloud Deck 1.0.4 caused an insecure direct object reference allowing an attacker to view all attachments.",
+    "ActionTaken": "The error has been fixed.",
+    "Acknowledgment":[
+      {
+         "Name": "Divyesh Prajapati",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Deck is upgraded to 1.0.5."
+}
