@@ -1,0 +1,33 @@
+{
+   "Title": "PIN for passwordless WebAuthn is asked for but not verified",
+   "Timestamp": 1598356800,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 4.3,
+      "vector": "AV:P/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 287,
+      "name": "Improper Authentication - Generic"
+   },
+   "HackerOne": 924393,
+   "Affected":[
+      {
+         "Version":"19.0.2",
+         "CVE":"CVE-2020-8236",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A wrong configuration in Nextcloud Server 19.0.1 incorrectly made the user feel the passwordless WebAuthn is also a two factor verification by asking for the PIN of the passwordless WebAuthn but not verifying it.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Dominik Schürmann",
+         "Mail": "contact@cotech.de",
+         "Company": "COTECH",
+         "Website": "https://www.cotech.de/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 19.0.2."
+}
