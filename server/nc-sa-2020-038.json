@@ -1,0 +1,43 @@
+{
+   "Title": "Message Authentication Codes calculated by the Default Encryption Module allow an attacker to silently overwrite blocks in a file",
+   "Timestamp": 1598400000,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 1.8,
+      "vector": "AV:L/AC:H/PR:H/UI:R/S:U/C:N/I:L/A:N"
+   },
+   "CWE": {
+      "id": 657,
+      "name": "Violation of Secure Design Principles"
+   },
+   "HackerOne": 661051,
+   "Affected":[
+      {
+         "Version":"19.0.2",
+         "CVE":"CVE-2020-8133",
+         "Operator":"<"
+      },
+      {
+         "Version":"18.0.8",
+         "CVE":"CVE-2020-8133",
+         "Operator":"<"
+      },
+      {
+         "Version":"17.0.10",
+         "CVE":"CVE-2020-8133",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A wrong generation of the passphrase for the encrypted block in Nextcloud Server 19.0.1 allowed an attacker to overwrite blocks in a file.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Kevin \"Kenny\" Niehage",
+         "Mail": "kenny@syseleven.de",
+         "Company": "SysEleven GmbH",
+         "Website": "https://www.syseleven.de/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 19.0.2."
+}
