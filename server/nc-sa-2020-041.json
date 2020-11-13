@@ -1,0 +1,33 @@
+{
+   "Title": "Improper integrity protection of server-side encryption keys",
+   "Timestamp": 1601726400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 7.4,
+      "vector": "AV:L/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 522,
+      "name": "Insufficiently Protected Credentials"
+   },
+   "HackerOne": 732431,
+   "Affected":[
+      {
+         "Version":"20.0.0",
+         "CVE":"CVE-2020-8259",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Insufficient protection of the server-side encryption keys in Nextcloud Server 19.0.1 allowed an attacker to replace the encryption keys.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Kevin \"Kenny\" Niehage",
+         "Mail": "kenny@syseleven.de",
+         "Company": "SysEleven GmbH",
+         "Website": "https://www.syseleven.de/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 20.0.0."
+}
