@@ -1,0 +1,31 @@
+{
+   "Title": "Social App does not validate server certificates for outgoing connections",
+   "Timestamp": 1602763200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.4,
+      "vector": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+   },
+   "CWE": {
+      "id": 295,
+      "name": "Improper Certificate Validation"
+   },
+   "HackerOne": 915585,
+   "Affected":[
+      {
+         "Version":"0.4.0",
+         "CVE":"CVE-2020-8279",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Missing validation of server certificates for out-going connections allowed a man-in-the-middle attack.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Roger Meyer",
+         "Website": "https://twitter.com/sanktjodel",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Social app is upgraded to 0.4.0."
+}
