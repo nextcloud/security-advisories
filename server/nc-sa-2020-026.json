@@ -27,6 +27,7 @@
    "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
+         "Name": "N/A",
          "Company": "Nextcloud GmbH",
          "Website": "https://nextcloud.com/",
          "Reason": "Vulnerability discovery and disclosure."
