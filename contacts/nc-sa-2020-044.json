@@ -1,0 +1,30 @@
+{
+   "Title": "XSS through image upload on contacts using svg file with png extension",
+   "Timestamp": 1603195200,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.5,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Cross-site Scripting (XSS) - Stored"
+   },
+   "HackerOne": 998422,
+   "Affected":[
+      {
+         "Version":"3.4.1",
+         "CVE":"CVE-2020-8280",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A missing file type check in Nextcloud Contacts 3.4.0 allowed a malicious user to upload SVG files as PNG files to perform XSS attacks.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Tommy Suriel",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Contacts is upgraded to 3.4.1."
+}
