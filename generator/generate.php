@@ -32,6 +32,7 @@ $components = [
     'deck' => 'Deck App',
     'groupfolders' => 'Groupfolders App',
     'mail' => 'Mail App',
+    'social' => 'Social App',
     'talk' => 'Talk App',
     'preferred_providers' => 'Preferred providers',
     'lookup-server' => 'Lookup server',
