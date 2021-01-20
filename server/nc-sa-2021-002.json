@@ -1,0 +1,41 @@
+{
+   "Title": "Stored XSS in markdown file with Nextcloud Talk using Internet Explorer",
+   "Timestamp": 1605700800,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 3.0,
+      "vector": "AV:N/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:N"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Cross-site Scripting (XSS) - Stored"
+   },
+   "HackerOne": 1023787,
+   "Affected":[
+      {
+         "Version":"20.0.2",
+         "CVE":"CVE-2020-8294",
+         "Operator":"<"
+      },
+      {
+         "Version":"19.0.5",
+         "CVE":"CVE-2020-8294",
+         "Operator":"<"
+      },
+      {
+         "Version":"18.0.11",
+         "CVE":"CVE-2020-8294",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A missing link validation in Nextcloud Server 20.0.1 allowed to execute a stored XSS attack on Internet Explorer users by saving a javascript url in a Markdown.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Luis Teixeira",
+         "Website": "luis@teix.co",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 20.0.2."
+}
