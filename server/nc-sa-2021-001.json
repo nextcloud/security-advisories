@@ -1,0 +1,41 @@
+{
+   "Title": "Potential DDoS when posting long data into workflow validation rules",
+   "Timestamp": 1605700800,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.7,
+      "vector": "AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H"
+   },
+   "CWE": {
+      "id": 400,
+      "name": "Denial of Service"
+   },
+   "HackerOne": 1018146,
+   "Affected":[
+      {
+         "Version":"20.0.2",
+         "CVE":"CVE-2020-8293",
+         "Operator":"<"
+      },
+      {
+         "Version":"19.0.5",
+         "CVE":"CVE-2020-8293",
+         "Operator":"<"
+      },
+      {
+         "Version":"18.0.11",
+         "CVE":"CVE-2020-8293",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A missing input validation in Nextcloud Server 20.0.1 allowed users to store unlimited data in workflow rules causing load and potential DDoS on later interactions and usage with those rules.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Mohamed Dief",
+         "Website": "https://twitter.com/DemoniaSlash",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 20.0.2."
+}
