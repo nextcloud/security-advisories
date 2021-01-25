@@ -1,0 +1,31 @@
+{
+   "Title": "Stored XSS in markdown file with Nextcloud Talk using Internet Explorer",
+   "Timestamp": 1601726400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 7.5,
+      "vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+   },
+   "CWE": {
+      "id": 400,
+      "name": "Denial of Service"
+   },
+   "HackerOne": 812754,
+   "Affected":[
+      {
+         "Version":"20.0.0",
+         "CVE":"CVE-2020-8295",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A wrong check in Nextcloud Server 19 and prior allowed to perform a denial of service attack when resetting the password for a user.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Jesús Ramos",
+         "Mail": "contact.makerlab@gmail.com",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 20.0.0."
+}
