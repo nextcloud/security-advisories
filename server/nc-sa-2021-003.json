@@ -1,5 +1,5 @@
 {
-   "Title": "Stored XSS in markdown file with Nextcloud Talk using Internet Explorer",
+   "Title": "Denial of Service by requesting to reset a password",
    "Timestamp": 1601726400,
    "Risk": 1,
    "CVSS3": {
@@ -24,6 +24,7 @@
       {
          "Name": "Jesús Ramos",
          "Mail": "contact.makerlab@gmail.com",
+         "Website": "https://makerlab.sytes.net/",
          "Reason": "Vulnerability discovery and disclosure."
       }
    ],
