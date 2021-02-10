@@ -19,7 +19,7 @@
       }
    ],
    "Description":"A missing condition in Nextcloud Server 19 and prior caused the external storage app to always store the users password in a recoverable format.",
-   "ActionTaken": "The error has been fixed.",
+   "ActionTaken": "The error has been fixed. Incorrectly stored passwords have been automatically cleaned-up from your database.",
    "Acknowledgment":[
       {
          "Name": "Anderson Luiz Alves",
