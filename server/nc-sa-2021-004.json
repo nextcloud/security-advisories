@@ -1,0 +1,32 @@
+{
+   "Title": "External storage credentials stored for wrong user",
+   "Timestamp": 1611572400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 8.7,
+      "vector": "AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N"
+   },
+   "CWE": {
+      "id": 284,
+      "name": "Improper Access Control - Generic"
+   },
+   "HackerOne": 1061591,
+   "Affected":[
+      {
+         "Version":"20.0.6",
+         "CVE":"CVE-2021-22877",
+         "Operator":"<"
+      }
+   ],
+   "Description":"A missing user check in Nextcloud 20.0.5 and prior allowed to populate your own credentials for other users external storage configuration when they did not configure one yet.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Alexander Hofstätter",
+         "Company": "Hofstätter IT GmbH",
+         "Website": "https://hofstaetter.io",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 20.0.6."
+}
