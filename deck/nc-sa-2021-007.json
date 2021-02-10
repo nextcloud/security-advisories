@@ -18,7 +18,7 @@
          "Operator":"<"
       }
    ],
-    "Description":"A logic error in Nextcloud Deck 1.0.1 caused allowed new users with an duplicate user identifier to use deck data of the previous deleted user.",
+    "Description":"A logic error in Nextcloud Deck 1.0.1 allowed new users with a duplicate user identifier to use deck data of a previous deleted user.",
     "ActionTaken": "The error has been fixed.",
     "Acknowledgment":[
       {
