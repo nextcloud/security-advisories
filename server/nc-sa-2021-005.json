@@ -1,0 +1,32 @@
+{
+   "Title": "Reflected XSS when renaming malicious file",
+   "Timestamp": 1611572400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.3,
+      "vector": "AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:L/A:L"
+   },
+   "CWE": {
+      "id": 79,
+      "name": "Cross-site Scripting (XSS) - Reflected"
+   },
+   "HackerOne": 896522,
+   "Affected":[
+      {
+         "Version":"20.0.6",
+         "CVE":"CVE-2021-22878",
+         "Operator":"<"
+      }
+   ],
+   "Description":"Missing sanitization in Nextcloud Server 20.0.5 and prior allowed to perform a reflected XSS when saving html as file name and causing an error on rename e.g. by renaming to an existing file. The risk is mostly mitigated due to the strict Content-Security-Policy (CSP) of Nextcloud, and thus mainly targets browsers not supporting CSP such as Internet Explorer.",
+   "ActionTaken": "The error has been fixed.",
+   "Acknowledgment":[
+      {
+         "Name": "Zhouyuan Yang",
+         "Company": "Fortinet",
+         "Website": "https://www.fortiguard.com/",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Server is upgraded to 20.0.6."
+}
