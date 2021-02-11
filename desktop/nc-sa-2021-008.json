@@ -1,6 +1,6 @@
 {
    "Title": "Missing URL validation allowed RCE for the server on the Desktop client",
-   "Timestamp": 123,
+   "Timestamp": 1614164400,
    "Risk": 1,
    "CVSS3": {
       "score": 4.7,
