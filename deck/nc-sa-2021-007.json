@@ -1,0 +1,33 @@
+{
+   "Title": "New users can read all Nextcloud Deck data from previous user with same username",
+   "Timestamp": 1591178400,
+   "Risk": 1,
+   "CVSS3": {
+      "score": 5.1,
+      "vector": "AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:L"
+   },
+   "CWE": {
+      "id": 639,
+      "name": "Insecure Direct Object Reference (IDOR)"
+   },
+   "HackerOne": 882258,
+   "Affected":[
+      {
+         "Version":"1.0.2",
+         "CVE":"CVE-2020-8297",
+         "Operator":"<"
+      }
+   ],
+    "Description":"A logic error in Nextcloud Deck 1.0.1 allowed new users with a duplicate user identifier to use deck data of a previous deleted user.",
+    "ActionTaken": "The error has been fixed.",
+    "Acknowledgment":[
+      {
+         "Name": "Stefan Niedermann",
+         "Mail": "info@niedermann.it",
+         "Website": "https://www.niedermann.it",
+         "Company": "Niedermann IT-Dienstleistungen",
+         "Reason": "Vulnerability discovery and disclosure."
+      }
+   ],
+   "Resolution": "It is recommended that the Nextcloud Deck is upgraded to 1.0.2."
+}
