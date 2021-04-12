@@ -18,7 +18,7 @@
          "Operator":"<"
       }
    ],
-   "Description":"Missing validation of URLs in Nextcloud Desktop Client 3.1.2 and earlier allowed a malicious server to execute code on the client.",
+   "Description":"Missing validation of URLs in Nextcloud Desktop Client 3.1.2 and earlier allowed a malicious server to execute code on the client. User interaction was required.",
    "ActionTaken": "The error has been fixed.",
    "Acknowledgment":[
       {
