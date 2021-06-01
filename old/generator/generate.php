@@ -52,7 +52,7 @@ foreach($components as $component => $componentName) {
     echo "… Iterating $component …\n";
     $componentBugs = [];
 
-    $dir = new DirectoryIterator(__DIR__ . '/../' . $component);
+    $dir = new DirectoryIterator(__DIR__ . '/../old/' . $component);
     foreach ($dir as $fileinfo) {
         if (!$fileinfo->isDot() && $fileinfo->getFilename() !== '.gitkeep') {
             echo "Processing $fileinfo \n";
@@ -192,7 +192,7 @@ foreach ($allBugs as $category => $list) {
         foreach ($advisories as $identifier => $title) {
             if (!isset($identifiersDone[$identifier])) {
                 $identifiersDone[$identifier] = 'true';
-                $advisoryContent = json_decode(file_get_contents(__DIR__ . '/../' . strtolower($category) . '/' . $identifier . '.json'), true);
+                $advisoryContent = json_decode(file_get_contents(__DIR__ . '/../old/' . strtolower($category) . '/' . $identifier . '.json'), true);
                 if (!isset($components[strtolower($category)])) {
                     throw new Exception('Unknown category: ' . $category);
                 }
